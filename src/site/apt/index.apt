@@ -1,0 +1,7 @@
+Introduction
+
+  TC-OSGI definit des composants java pour definir des FSM et des structures de kripke
+
+  TC-OSGI definit un framework pour faire des transformations de structure transitionnel et de la verification de modele
+
+  Le composant logic a pour but la modelisation de logique propositionnelle et de logique temporelle. 

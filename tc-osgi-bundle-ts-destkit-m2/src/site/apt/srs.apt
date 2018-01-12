@@ -1,0 +1,39 @@
+Destkit-m2 Software Requirements Specification
+
+* Metamodele
+
+** @req SRS_BUNDLE_DESTKIT_M2_010
+
+  Le framework implemente les automates a etats transition conforme a la theorie de Ramadge Wohnam
+  
+        * @version 0.0.1
+
+** @req SRS_BUNDLE_DESTKIT_M2_020
+
+  Les evenements peuvent etre controllable ou non controllable
+  
+        * @version 0.0.1
+   
+** @req SRS_BUNDLE_DESTKIT_M2_030
+
+  Les evenements peuvent etre observable ou non observable 
+  
+        * @version 0.0.1   
+        
+** @req SRS_BUNDLE_DESTKIT_M2_040
+
+  Les etats peuvent etre initiaux ou non 
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_M2_050
+
+  Les etats peuvent etre marqué ou non marqué
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_M2_060
+
+  Le framework fourni une semantique operationnelle
+  
+        * @version 0.0.1

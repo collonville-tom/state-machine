@@ -1,0 +1,11 @@
+Logic Temporelle Lineaire Specification version 0.0.1
+
+* Basic
+
+** @req SRS_BUNDLE_LOGIC_LTL_010
+
+  Le bundle fourni au niveau M2 les concepts clefs des logiques temporelle lineaire (Next, Until)
+  
+        * @version 0.0.1
+        
+        * @track SRS_LOGIC_020

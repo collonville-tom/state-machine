@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_a7o28ccWEeKx89nzHWriJQ" name="">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8pjkMcWEeKx89nzHWriJQ" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8rYwMcWEeKx89nzHWriJQ" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8r_0McWEeKx89nzHWriJQ" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8r_0ccWEeKx89nzHWriJQ" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8r_0scWEeKx89nzHWriJQ" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8r_08cWEeKx89nzHWriJQ" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8r_1McWEeKx89nzHWriJQ" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a8sm4McWEeKx89nzHWriJQ" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_a-JYYMcWEeKx89nzHWriJQ" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_a-JYYccWEeKx89nzHWriJQ" name="tc">
+      <packagedElement xmi:type="uml:Package" xmi:id="_a-JYYscWEeKx89nzHWriJQ" name="osgi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_a-J_cMcWEeKx89nzHWriJQ" name="bundle">
+          <packagedElement xmi:type="uml:Package" xmi:id="_a-J_cccWEeKx89nzHWriJQ" name="ts">
+            <packagedElement xmi:type="uml:Package" xmi:id="_a-J_cscWEeKx89nzHWriJQ" name="m3">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_a-kPIMcWEeKx89nzHWriJQ" name="IState">
+                <ownedOperation xmi:id="_a_eOEMcWEeKx89nzHWriJQ" name="getName" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_eOEccWEeKx89nzHWriJQ" name="return" type="_a_T2AMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_fcMccWEeKx89nzHWriJQ" name="getProperty" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_fcMscWEeKx89nzHWriJQ" name="return" type="_a_fcMMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_a-ldQMcWEeKx89nzHWriJQ" name="ITs">
+                <ownedOperation xmi:id="_a_gDQMcWEeKx89nzHWriJQ" name="getName" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_gDQccWEeKx89nzHWriJQ" name="return" type="_a_T2AMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_gqUMcWEeKx89nzHWriJQ" name="getProperty" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_gqUccWEeKx89nzHWriJQ" name="return" type="_a_fcMMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_gqUscWEeKx89nzHWriJQ" name="getStates" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_gqU8cWEeKx89nzHWriJQ" name="return" type="_a_fcMMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_hRYMcWEeKx89nzHWriJQ" name="getTransitions" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_hRYccWEeKx89nzHWriJQ" name="return" type="_a_fcMMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_a-mrYMcWEeKx89nzHWriJQ" name="IProperty">
+                <ownedOperation xmi:id="_a_hRYscWEeKx89nzHWriJQ" name="getName" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_hRY8cWEeKx89nzHWriJQ" name="return" type="_a_T2AMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_a-n5gMcWEeKx89nzHWriJQ" name="ITransition">
+                <ownedOperation xmi:id="_a_h4cMcWEeKx89nzHWriJQ" name="getProperty" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_h4cccWEeKx89nzHWriJQ" name="return" type="_a_fcMMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_h4cscWEeKx89nzHWriJQ" name="getSourceState" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_h4c8cWEeKx89nzHWriJQ" name="return" type="_a-kPIMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_ifgMcWEeKx89nzHWriJQ" name="getTargetState" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_a_ifgccWEeKx89nzHWriJQ" name="return" type="_a-kPIMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_a_T2AMcWEeKx89nzHWriJQ" name="String"/>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_a_fcMMcWEeKx89nzHWriJQ" name="Set"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_a-ogkMcWEeKx89nzHWriJQ" name="utils">
+              <packagedElement xmi:type="uml:Class" xmi:id="_a-93wMcWEeKx89nzHWriJQ" name="TSSerialTool">
+                <ownedAttribute xmi:id="_a_rCYMcWEeKx89nzHWriJQ" name="serialTool" visibility="protected" type="_a-93wMcWEeKx89nzHWriJQ" association="_a_4dwMcWEeKx89nzHWriJQ"/>
+                <ownedAttribute xmi:id="_a_rpcMcWEeKx89nzHWriJQ" name="xmlExtension" visibility="public" type="_a_T2AMcWEeKx89nzHWriJQ"/>
+                <ownedAttribute xmi:id="_a_rpcccWEeKx89nzHWriJQ" name="defaultSerialisationDir" visibility="private" type="_a_T2AMcWEeKx89nzHWriJQ"/>
+                <ownedOperation xmi:id="_a_sQgMcWEeKx89nzHWriJQ" name="getInstance" visibility="public" isStatic="true">
+                  <ownedParameter xmi:id="_a_sQgccWEeKx89nzHWriJQ" name="return" type="_a-93wMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_s3kMcWEeKx89nzHWriJQ" name="getDefaultSerialisationDir" visibility="public">
+                  <ownedParameter xmi:id="_a_s3kccWEeKx89nzHWriJQ" name="return" type="_a_T2AMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_teoMcWEeKx89nzHWriJQ" name="readTS" visibility="public">
+                  <ownedParameter xmi:id="_a_teoccWEeKx89nzHWriJQ" name="name" type="_a_T2AMcWEeKx89nzHWriJQ"/>
+                  <ownedParameter xmi:id="_a_teoscWEeKx89nzHWriJQ" name="return" type="_a-ldQMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_uswMcWEeKx89nzHWriJQ" name="saveTS" visibility="public">
+                  <ownedParameter xmi:id="_a_uswccWEeKx89nzHWriJQ" name="ts" type="_a-ldQMcWEeKx89nzHWriJQ"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_a_vT0McWEeKx89nzHWriJQ" name="toString" visibility="public">
+                  <ownedParameter xmi:id="_a_vT0ccWEeKx89nzHWriJQ" name="return" type="_a_T2AMcWEeKx89nzHWriJQ" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_a_FzkMcWEeKx89nzHWriJQ" name="exception">
+                <packagedElement xmi:type="uml:Class" xmi:id="_a_HBsMcWEeKx89nzHWriJQ" name="TSFileNotFoundException">
+                  <generalization xmi:id="_a_y-MMcWEeKx89nzHWriJQ" general="_a_v64McWEeKx89nzHWriJQ"/>
+                  <ownedAttribute xmi:id="_a_y-MccWEeKx89nzHWriJQ" name="serialVersionUID" visibility="private" type="_a8r_1McWEeKx89nzHWriJQ"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:DataType" xmi:id="_a_v64McWEeKx89nzHWriJQ" name="Exception"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_a_4dwMcWEeKx89nzHWriJQ" memberEnd="_a_rCYMcWEeKx89nzHWriJQ _a_4dwccWEeKx89nzHWriJQ">
+                <ownedEnd xmi:id="_a_4dwccWEeKx89nzHWriJQ" name="target" type="_a-93wMcWEeKx89nzHWriJQ" association="_a_4dwMcWEeKx89nzHWriJQ"/>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

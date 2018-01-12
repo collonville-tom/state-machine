@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_LJYhoL5vEeKhi5OGInQTnA" name="">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJYhob5vEeKhi5OGInQTnA" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJYhor5vEeKhi5OGInQTnA" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJZIsL5vEeKhi5OGInQTnA" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJZIsb5vEeKhi5OGInQTnA" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJZIsr5vEeKhi5OGInQTnA" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJZvwL5vEeKhi5OGInQTnA" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJZvwb5vEeKhi5OGInQTnA" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LJZvwr5vEeKhi5OGInQTnA" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_LKQrYL5vEeKhi5OGInQTnA" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_LKQrYb5vEeKhi5OGInQTnA" name="tc">
+      <packagedElement xmi:type="uml:Package" xmi:id="_LKQrYr5vEeKhi5OGInQTnA" name="osgi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_LKQrY75vEeKhi5OGInQTnA" name="bundle">
+          <packagedElement xmi:type="uml:Package" xmi:id="_LKRScL5vEeKhi5OGInQTnA" name="solve">
+            <packagedElement xmi:type="uml:Package" xmi:id="_LKRScb5vEeKhi5OGInQTnA" name="transformation">
+              <packagedElement xmi:type="uml:Class" xmi:id="_LKSgkL5vEeKhi5OGInQTnA" name="Kripke2Fsm">
+                <ownedOperation xmi:id="_LKXZEb5vEeKhi5OGInQTnA" name="transform" visibility="public">
+                  <ownedParameter xmi:id="_LKXZEr5vEeKhi5OGInQTnA" name="k" type="_LKWyAL5vEeKhi5OGInQTnA"/>
+                  <ownedParameter xmi:id="_LKXZE75vEeKhi5OGInQTnA" name="return" type="_LKXZEL5vEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_LKTusL5vEeKhi5OGInQTnA" name="LpSatisfyOnIStateAsFSMTest">
+                <ownedOperation xmi:id="_LKYAIL5vEeKhi5OGInQTnA" name="test" visibility="public"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_LKVj4L5vEeKhi5OGInQTnA" name="Kripke2FsmTest">
+                <ownedOperation xmi:id="_LKYAIb5vEeKhi5OGInQTnA" name="test" visibility="public"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_LKWK8L5vEeKhi5OGInQTnA" name="LpSatisfyOnIStateAsKripkeTest">
+                <ownedOperation xmi:id="_LKYnML5vEeKhi5OGInQTnA" name="testKS" visibility="public"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_LKWyAL5vEeKhi5OGInQTnA" name="Kripke"/>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_LKXZEL5vEeKhi5OGInQTnA" name="FiniteStateMachine"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

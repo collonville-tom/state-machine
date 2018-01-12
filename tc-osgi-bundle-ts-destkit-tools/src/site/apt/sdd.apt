@@ -1,0 +1,21 @@
+Destkit-tools Software Design Description
+
+* Outils
+
+** @req SDD_BUNDLE_DESTKIT_TOOL_010
+
+  Destkit-tools defini une classe FsmTools comportant l'ensemble des algorithmes de calcul standart sur les automates a etats finis. Cette classe s'appuie sur une classe de renommage (NameBuilder) pour la constuction des resultat stockés via un ResultAssociationTable.
+  
+        * @version 0.0.1
+       
+       	* @track SRS_BUNDLE_DESTKIT_TOOL_10, SRS_BUNDLE_DESTKIT_TOOL_20, SRS_BUNDLE_DESTKIT_TOOL_30, SRS_BUNDLE_DESTKIT_TOOL_40, SRS_BUNDLE_DESTKIT_TOOL_50, SRS_BUNDLE_DESTKIT_TOOL_60, SRS_BUNDLE_DESTKIT_TOOL_70, SRS_BUNDLE_DESTKIT_TOOL_80, SRS_BUNDLE_DESTKIT_TOOL_90, SRS_BUNDLE_DESTKIT_TOOL_100, SRS_BUNDLE_DESTKIT_TOOL_110, SRS_BUNDLE_DESTKIT_TOOL_120, SRS_BUNDLE_DESTKIT_TOOL_130, SRS_BUNDLE_DESTKIT_TOOL_140, SRS_BUNDLE_DESTKIT_TOOL_150
+       	
+=====================
+
+[model/destkit-tools.png] Operations sur les FSM
+
+** @req SDD_BUNDLE_DESTKIT_TOOL_020
+
+  Une hierarchie de classe de type Visitor permet la serialisation des automates dans les formalismes, PI, Graphviz et Java 
+  
+        * @version 0.0.1

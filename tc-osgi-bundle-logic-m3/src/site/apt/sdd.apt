@@ -1,0 +1,15 @@
+Logic M3 Specification version 0.0.1
+
+=====================
+
+[model/No name.jpg] Classe M3
+
+* Basic
+
+** @req SDD_BUNDLE_LOGIC_M3_010
+
+  Le bundle fourni la classe AbstractFormule et l'interface IPa (pour les proprietés)
+  
+        * @version 0.0.1
+        
+        * @track SRS_BUNDLE_LOGIC_M3_010

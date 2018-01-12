@@ -1,0 +1,9 @@
+Kripke m2 Software Requirements Specification
+
+* Metamodele
+
+** @req SRS_BUNDLE_KRIPKE_M2_010
+
+  Le framework implemente les automates de kripke
+  
+        * @version 0.0.1

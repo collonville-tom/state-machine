@@ -1,0 +1,15 @@
+Kripke-metamodel Software Design Description
+
+=====================
+
+[model/mm2.png] Metamodele des structure de kripke
+
+* Metametamodele
+
+** @req SDD_BUNDLE_KRIPKE_M2_010
+
+  Le framework definit un metamodel des structures de kripke en implemetant un modele a etat
+  
+        * @version 0.0.1
+        
+        * @track SRS_BUNDLE_KRIPKE_M2_010

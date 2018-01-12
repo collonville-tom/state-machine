@@ -1,0 +1,15 @@
+LogicPropositionnel Specification version 0.0.1
+
+=====================
+
+[model/unnamed.jpg] Classe d'application des logique LP
+
+* Basic
+
+** @req SDD_BUNDLE_LOGIC_LP_010
+
+  Le bundle fourni au niveau M2 les concepts clefs des logiques propositionnelle au travers d'un pattern commande implementant les classes (Et, Futur, Not, Ou, Toujours)
+  
+        * @version 0.0.1
+        
+        * @track SRS_BUNDLE_LOGIC_LP_010, SDD_BUNDLE_LOGIC_M3_010

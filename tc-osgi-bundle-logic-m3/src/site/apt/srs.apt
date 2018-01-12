@@ -1,0 +1,11 @@
+Logic M3 Specification version 0.0.1
+
+* Basic
+
+** @req SRS_BUNDLE_LOGIC_M3_010
+
+  Le bundle fourni au niveau M3 les concepts clefs des logiques
+  
+        * @version 0.0.1
+        
+        * @track SRS_LOGIC_010, SRS_LOGIC_020

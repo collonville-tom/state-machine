@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_jtu2oL5uEeKhi5OGInQTnA" name="">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtu2ob5uEeKhi5OGInQTnA" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtu2or5uEeKhi5OGInQTnA" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtu2o75uEeKhi5OGInQTnA" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtvdsL5uEeKhi5OGInQTnA" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtvdsb5uEeKhi5OGInQTnA" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtvdsr5uEeKhi5OGInQTnA" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtwEwL5uEeKhi5OGInQTnA" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jtwEwb5uEeKhi5OGInQTnA" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_jucoUL5uEeKhi5OGInQTnA" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jucoUb5uEeKhi5OGInQTnA" name="tc">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jucoUr5uEeKhi5OGInQTnA" name="osgi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_jucoU75uEeKhi5OGInQTnA" name="bundle">
+          <packagedElement xmi:type="uml:Package" xmi:id="_jucoVL5uEeKhi5OGInQTnA" name="solve">
+            <packagedElement xmi:type="uml:Package" xmi:id="_jucoVb5uEeKhi5OGInQTnA" name="m3">
+              <packagedElement xmi:type="uml:Class" xmi:id="_juedgL5uEeKhi5OGInQTnA" name="AbstractSatisfy">
+                <ownedAttribute xmi:id="_jugSsb5uEeKhi5OGInQTnA" name="propertySet" visibility="private" type="_jugSsL5uEeKhi5OGInQTnA"/>
+                <ownedAttribute xmi:id="_jugSs75uEeKhi5OGInQTnA" name="transitionStructure" visibility="private" type="_jugSsr5uEeKhi5OGInQTnA"/>
+                <ownedOperation xmi:id="_jug5wb5uEeKhi5OGInQTnA" name="evaluate" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_jug5wr5uEeKhi5OGInQTnA" name="form" type="_jug5wL5uEeKhi5OGInQTnA"/>
+                  <ownedParameter xmi:id="_jug5w75uEeKhi5OGInQTnA" name="return" type="_jug5wL5uEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_juhg0L5uEeKhi5OGInQTnA" name="getPropertySet" visibility="public">
+                  <ownedParameter xmi:id="_juhg0b5uEeKhi5OGInQTnA" name="return" type="_jugSsL5uEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_juhg0r5uEeKhi5OGInQTnA" name="getTransitionStructure" visibility="public">
+                  <ownedParameter xmi:id="_juiH4L5uEeKhi5OGInQTnA" name="return" type="_jugSsr5uEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_juiu8L5uEeKhi5OGInQTnA" name="setPropertySet" visibility="public">
+                  <ownedParameter xmi:id="_juiu8b5uEeKhi5OGInQTnA" name="propertySet" type="_jugSsL5uEeKhi5OGInQTnA"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_jujWAL5uEeKhi5OGInQTnA" name="setTransitionStructure" visibility="public">
+                  <ownedParameter xmi:id="_jujWAb5uEeKhi5OGInQTnA" name="transitionStructure" type="_jugSsr5uEeKhi5OGInQTnA"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_jujWAr5uEeKhi5OGInQTnA" name="toString" visibility="public">
+                  <ownedParameter xmi:id="_jujWA75uEeKhi5OGInQTnA" name="return" type="_jug5wL5uEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_jufroL5uEeKhi5OGInQTnA" name="AbstractInterprete">
+                <ownedAttribute xmi:id="_juj9EL5uEeKhi5OGInQTnA" name="formule" visibility="private" type="_jug5wL5uEeKhi5OGInQTnA"/>
+                <ownedOperation xmi:id="_juj9Eb5uEeKhi5OGInQTnA" name="getStringformule" visibility="public">
+                  <ownedParameter xmi:id="_juj9Er5uEeKhi5OGInQTnA" name="return" type="_jug5wL5uEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_jukkIL5uEeKhi5OGInQTnA" name="setStringformule" visibility="public">
+                  <ownedParameter xmi:id="_jukkIb5uEeKhi5OGInQTnA" name="stringformule" type="_jug5wL5uEeKhi5OGInQTnA"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_julLMb5uEeKhi5OGInQTnA" name="text2Formule" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_julLMr5uEeKhi5OGInQTnA" name="satisfyFonction" type="_juedgL5uEeKhi5OGInQTnA"/>
+                  <ownedParameter xmi:id="_julLM75uEeKhi5OGInQTnA" name="return" type="_julLML5uEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_jugSsL5uEeKhi5OGInQTnA" name="Set"/>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_jugSsr5uEeKhi5OGInQTnA" name="ITs"/>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_jug5wL5uEeKhi5OGInQTnA" name="String"/>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_julLML5uEeKhi5OGInQTnA" name="AbstractFormule"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

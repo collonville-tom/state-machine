@@ -1,0 +1,17 @@
+image-4: /patte3.gif
+image-3: /patte2.gif
+image-2: /patte1.gif
+image-1: /mouse.gif
+image-0: /cat.gif
+MIDlet-1: New Midlet,,destKit.mobile.DestkitMobile
+MIDlet-Jar-URL: destKitMidlet.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.0.0
+MIDlet-Vendor: Midlet Suite Vendor
+MIDlet-Name: destKitMidlet Midlet Suite
+MicroEdition-Profile: MIDP-2.1
+image-S-1: /Copy of S.gif
+image-S-0: /S.gif
+image-7: /patte6.gif
+image-6: /patte5.gif
+image-5: /patte4.gif

@@ -1,0 +1,11 @@
+Logic structure transitionnel M3 Software Requirements Specification
+
+* Solve Projects
+
+** @req SRS_SOLVE_M3_010
+
+  Propose les concepts pour interpreter et calculer la regle de satisfaction 
+  
+        * @version 0.0.1
+        
+        * @track SRS_SOLVE_010

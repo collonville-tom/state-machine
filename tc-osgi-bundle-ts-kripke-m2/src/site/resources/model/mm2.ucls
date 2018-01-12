@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="org.tc.osgi.bundle.ts.kripke.metamodel.core.PropAtom" 
+    project="tc-osgi-bundle-ts-kripke-m2" 
+    file="/tc-osgi-bundle-ts-kripke-m2/src/main/java/org/tc/osgi/bundle/ts/kripke/metamodel/core/PropAtom.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="124" y="1055"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="org.tc.osgi.bundle.ts.kripke.metamodel.core.State" 
+    project="tc-osgi-bundle-ts-kripke-m2" 
+    file="/tc-osgi-bundle-ts-kripke-m2/src/main/java/org/tc/osgi/bundle/ts/kripke/metamodel/core/State.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="390" y="1130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="org.tc.osgi.bundle.ts.kripke.metamodel.core.Transition" 
+    project="tc-osgi-bundle-ts-kripke-m2" 
+    file="/tc-osgi-bundle-ts-kripke-m2/src/main/java/org/tc/osgi/bundle/ts/kripke/metamodel/core/Transition.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="698" y="1057"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="org.tc.osgi.bundle.ts.kripke.metamodel.StatesSet" 
+    project="tc-osgi-bundle-ts-kripke-m2" 
+    file="/tc-osgi-bundle-ts-kripke-m2/src/main/java/org/tc/osgi/bundle/ts/kripke/metamodel/StatesSet.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="295" width="236" x="21" y="562"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="org.tc.osgi.bundle.ts.kripke.metamodel.Kripke" 
+    project="tc-osgi-bundle-ts-kripke-m2" 
+    file="/tc-osgi-bundle-ts-kripke-m2/src/main/java/org/tc/osgi/bundle/ts/kripke/metamodel/Kripke.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="961" width="236" x="297" y="-439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="org.tc.osgi.bundle.ts.kripke.metamodel.TransitionsSet" 
+    project="tc-osgi-bundle-ts-kripke-m2" 
+    file="/tc-osgi-bundle-ts-kripke-m2/src/main/java/org/tc/osgi/bundle/ts/kripke/metamodel/TransitionsSet.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="187" width="229" x="547" y="562"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="org.tc.osgi.bundle.ts.kripke.metamodel.PropAtomSet" 
+    project="tc-osgi-bundle-ts-kripke-m2" 
+    file="/tc-osgi-bundle-ts-kripke-m2/src/main/java/org/tc/osgi/bundle/ts/kripke/metamodel/PropAtomSet.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="169" width="210" x="297" y="562"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="8">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="9" name="propAtomSet"/>      
+      <multiplicity id="10" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="11">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="12" name="output"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="14">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="15" name="statesSet"/>      
+      <multiplicity id="16" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="17">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="18" name="input"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="21" name="transitionFunction"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="24" name="propAtomSet"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

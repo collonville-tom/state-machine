@@ -1,0 +1,23 @@
+Destkit-m2 Software Design Description
+
+=====================
+
+[model/mm2.png] Metamodele des automates a etes finis
+
+* Metametamodele
+
+** @req SDD_BUNDLE_DESTKIT_M2_010
+
+  Le framework definit un metamodel des FSM sur la base des Etats Transitions et Evenements
+  
+        * @version 0.0.2
+        
+        * @track SRS_BUNDLE_DESTKIT_M2_010, SRS_BUNDLE_DESTKIT_M2_020, SRS_BUNDLE_DESTKIT_M2_030, SRS_BUNDLE_DESTKIT_M2_040, SRS_BUNDLE_DESTKIT_M2_050
+        
+** @req SDD_BUNDLE_DESTKIT_M2_020
+
+  Le framework utilise un iterateur FsmOpSem pour executer les automates selon a la theorie de R&W
+  
+        * @version 0.0.2
+        
+        * @track SRS_BUNDLE_DESTKIT_M2_060

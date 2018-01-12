@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_lN-94L5tEeKhi5OGInQTnA" name="">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lN_k8L5tEeKhi5OGInQTnA" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lN_k8b5tEeKhi5OGInQTnA" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lOAMAL5tEeKhi5OGInQTnA" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lOAMAb5tEeKhi5OGInQTnA" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lOAMAr5tEeKhi5OGInQTnA" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lOAzEL5tEeKhi5OGInQTnA" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lOAzEb5tEeKhi5OGInQTnA" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lOAzEr5tEeKhi5OGInQTnA" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_lOnQAL5tEeKhi5OGInQTnA" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_lOnQAb5tEeKhi5OGInQTnA" name="tc">
+      <packagedElement xmi:type="uml:Package" xmi:id="_lOnQAr5tEeKhi5OGInQTnA" name="osgi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_lOn3EL5tEeKhi5OGInQTnA" name="bundle">
+          <packagedElement xmi:type="uml:Package" xmi:id="_lOn3Eb5tEeKhi5OGInQTnA" name="logic">
+            <packagedElement xmi:type="uml:Package" xmi:id="_lOn3Er5tEeKhi5OGInQTnA" name="ltl">
+              <packagedElement xmi:type="uml:Package" xmi:id="_lOn3E75tEeKhi5OGInQTnA" name="metamodel">
+                <packagedElement xmi:type="uml:Class" xmi:id="_lOpFML5tEeKhi5OGInQTnA" name="Next">
+                  <generalization xmi:id="_lOrhcL5tEeKhi5OGInQTnA" general="_lOpsQL5tEeKhi5OGInQTnA"/>
+                  <ownedAttribute xmi:id="_lOsIgL5tEeKhi5OGInQTnA" name="formule" visibility="private" type="_lOpsQL5tEeKhi5OGInQTnA" association="_lOvL0L5tEeKhi5OGInQTnA"/>
+                  <ownedOperation xmi:id="_lOsIgb5tEeKhi5OGInQTnA" name="evaluate" visibility="public">
+                    <ownedParameter xmi:id="_lOsIgr5tEeKhi5OGInQTnA" name="return" type="_lOpsQL5tEeKhi5OGInQTnA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:id="_lOsvkb5tEeKhi5OGInQTnA" name="toString" visibility="public">
+                    <ownedParameter xmi:id="_lOsvkr5tEeKhi5OGInQTnA" name="return" type="_lOsvkL5tEeKhi5OGInQTnA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_lOpsQL5tEeKhi5OGInQTnA" name="AbstractLtl">
+                  <generalization xmi:id="_lOtWob5tEeKhi5OGInQTnA" general="_lOtWoL5tEeKhi5OGInQTnA"/>
+                  <ownedOperation xmi:id="_lOt9sL5tEeKhi5OGInQTnA" name="evaluate" visibility="public" isAbstract="true">
+                    <ownedParameter xmi:id="_lOt9sb5tEeKhi5OGInQTnA" name="return" type="_lOpsQL5tEeKhi5OGInQTnA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_lOq6YL5tEeKhi5OGInQTnA" name="Until">
+                  <generalization xmi:id="_lOukwL5tEeKhi5OGInQTnA" general="_lOpsQL5tEeKhi5OGInQTnA"/>
+                  <ownedOperation xmi:id="_lOukwb5tEeKhi5OGInQTnA" name="evaluate" visibility="public">
+                    <ownedParameter xmi:id="_lOukwr5tEeKhi5OGInQTnA" name="return" type="_lOpsQL5tEeKhi5OGInQTnA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:id="_lOukw75tEeKhi5OGInQTnA" name="toString" visibility="public">
+                    <ownedParameter xmi:id="_lOukxL5tEeKhi5OGInQTnA" name="return" type="_lOsvkL5tEeKhi5OGInQTnA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:DataType" xmi:id="_lOsvkL5tEeKhi5OGInQTnA" name="String"/>
+                <packagedElement xmi:type="uml:DataType" xmi:id="_lOtWoL5tEeKhi5OGInQTnA" name="AbstractFormule"/>
+                <packagedElement xmi:type="uml:Association" xmi:id="_lOvL0L5tEeKhi5OGInQTnA" memberEnd="_lOsIgL5tEeKhi5OGInQTnA _lOvL0b5tEeKhi5OGInQTnA">
+                  <ownedEnd xmi:id="_lOvL0b5tEeKhi5OGInQTnA" name="target" type="_lOpFML5tEeKhi5OGInQTnA" association="_lOvL0L5tEeKhi5OGInQTnA"/>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

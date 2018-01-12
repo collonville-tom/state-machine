@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_CnKwUL5sEeKhi5OGInQTnA" name="">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnkY8L5sEeKhi5OGInQTnA" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnlAAL5sEeKhi5OGInQTnA" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnlAAb5sEeKhi5OGInQTnA" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnlAAr5sEeKhi5OGInQTnA" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnlnEL5sEeKhi5OGInQTnA" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnlnEb5sEeKhi5OGInQTnA" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnlnEr5sEeKhi5OGInQTnA" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CnlnE75sEeKhi5OGInQTnA" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Cob7oL5sEeKhi5OGInQTnA" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_CocisL5sEeKhi5OGInQTnA" name="tc">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Cocisb5sEeKhi5OGInQTnA" name="osgi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Cocisr5sEeKhi5OGInQTnA" name="bundle">
+          <packagedElement xmi:type="uml:Package" xmi:id="_Cocis75sEeKhi5OGInQTnA" name="logic">
+            <packagedElement xmi:type="uml:Package" xmi:id="_CocitL5sEeKhi5OGInQTnA" name="m3">
+              <packagedElement xmi:type="uml:Class" xmi:id="_CosaUL5sEeKhi5OGInQTnA" name="AbstractFormule">
+                <ownedOperation xmi:id="_CpKUYL5sEeKhi5OGInQTnA" name="evaluate" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_CpK7cL5sEeKhi5OGInQTnA" name="return" type="_CosaUL5sEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_CpMJkb5sEeKhi5OGInQTnA" name="result" visibility="public">
+                  <ownedParameter xmi:id="_CpMJkr5sEeKhi5OGInQTnA" name="return" type="_CpMJkL5sEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_CpMJk75sEeKhi5OGInQTnA" name="toString" visibility="public" isAbstract="true">
+                  <ownedParameter xmi:id="_CpMJlL5sEeKhi5OGInQTnA" name="return" type="_CpMJkL5sEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_CowrwL5sEeKhi5OGInQTnA" name="IPa">
+                <ownedOperation xmi:id="_CpMwoL5sEeKhi5OGInQTnA" name="getName" visibility="public">
+                  <ownedParameter xmi:id="_CpMwob5sEeKhi5OGInQTnA" name="return" type="_CpMJkL5sEeKhi5OGInQTnA" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:DataType" xmi:id="_CpMJkL5sEeKhi5OGInQTnA" name="String"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

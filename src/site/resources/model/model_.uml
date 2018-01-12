@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="idModel" name="modelModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="modelPackage">
+    <packagedElement xmi:type="uml:Component" xmi:id="idComponent" name="modelComponent">
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_J59MEL2pEeKYnoX-p9aBIg" name="utils"/>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_16T5oL5fEeKhi5OGInQTnA" name="logic-ts-m3"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_GR45ML2pEeKYnoX-p9aBIg" name="osgi-parent">
+        <packagedElement xmi:type="uml:Component" xmi:id="_PIu-EL2pEeKYnoX-p9aBIg" name="discret"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_RWYhYL2pEeKYnoX-p9aBIg" name="listeCD"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_TE1AML2pEeKYnoX-p9aBIg" name="morphmath"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_bK-n8L2pEeKYnoX-p9aBIg" name="equinox-loader"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_jlO3cL2pEeKYnoX-p9aBIg" name="fwmetamodel"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_njakQL2pEeKYnoX-p9aBIg" name="neuronal-network"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_qpBqUL2pEeKYnoX-p9aBIg" name="solve"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_uN1N0L2pEeKYnoX-p9aBIg" name="ts"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_1MLgAL2pEeKYnoX-p9aBIg" name="requirement-tracking"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_3uwxgL2pEeKYnoX-p9aBIg" name="task-tracking"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_qVqM8L2qEeKYnoX-p9aBIg" name="" client="_jlO3cL2pEeKYnoX-p9aBIg" supplier="_J59MEL2pEeKYnoX-p9aBIg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_0CQ1IL2qEeKYnoX-p9aBIg" name="" client="_bK-n8L2pEeKYnoX-p9aBIg" supplier="_J59MEL2pEeKYnoX-p9aBIg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_2p1UUL2qEeKYnoX-p9aBIg" name="" client="_TE1AML2pEeKYnoX-p9aBIg" supplier="_J59MEL2pEeKYnoX-p9aBIg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_7vCTkL2qEeKYnoX-p9aBIg" name="" client="_RWYhYL2pEeKYnoX-p9aBIg" supplier="_J59MEL2pEeKYnoX-p9aBIg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_mR8VUL2pEeKYnoX-p9aBIg" name="logic">
+        <packagedElement xmi:type="uml:Component" xmi:id="_xKetcL5fEeKhi5OGInQTnA" name="logic-m3"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_7Jn3IL5fEeKhi5OGInQTnA" name="logic-ltl"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_8seJ8L5fEeKhi5OGInQTnA" name="logic-lp"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_C5cpkL5gEeKhi5OGInQTnA" name="" client="_8seJ8L5fEeKhi5OGInQTnA" supplier="_xKetcL5fEeKhi5OGInQTnA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Ecw2c75gEeKhi5OGInQTnA" name="" client="_8seJ8L5fEeKhi5OGInQTnA" supplier="_16T5oL5fEeKhi5OGInQTnA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_E3ZkAL5gEeKhi5OGInQTnA" name="" client="_8seJ8L5fEeKhi5OGInQTnA" supplier="_J59MEL2pEeKYnoX-p9aBIg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_KaNsUL5gEeKhi5OGInQTnA" name="" client="_7Jn3IL5fEeKhi5OGInQTnA" supplier="_8seJ8L5fEeKhi5OGInQTnA"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

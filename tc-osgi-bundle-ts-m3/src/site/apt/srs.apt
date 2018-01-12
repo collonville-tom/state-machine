@@ -1,0 +1,19 @@
+Transition structure M3 Software Requirements Specification
+
+* Metametamodele
+
+** @req SRS_BUNDLE_TS_M3_010
+
+  Le framework definit par des interfaces les elements de base d'un systeme a transition
+  
+        * @version 0.0.2
+        
+        * @track SRS_BUNDLE_TS_010
+
+** @req SRS_BUNDLE_TS_M3_020
+
+  Le framework les moyens de serialisation de systemes a transitions
+  
+        * @version 0.0.2
+        
+        * @track SRS_BUNDLE_TS_020

@@ -1,0 +1,83 @@
+Transitionnal structure Software Design Description
+
+* System a transition
+
+** @req SDD_TS_010
+
+  Le project propose un composant de niveau M3 pour proposer les concepts associés aux system a transition
+  
+        * @version 0.0.2
+        
+        * @track SRS_TS_010
+
+** @req SDD_TS_020
+
+  Le project propose deux composants pour implementer des FSM et des Structure de Kripke
+  
+        * @version 0.0.2
+        
+        * @track SRS_TS_010
+
+        * @depend SDD_TS_010
+
+** @req SDD_TS_030
+
+  Le projet propose deux composants utilitaire pour manipuler les systemes a transition
+  
+        * @version 0.0.2
+        
+        * @track SRS_TS_020
+        
+        * @depend SDD_TS_020
+
+=====================
+
+[model/model.jpg] Liste des projets
+
+* Solve Projects
+
+** @req SDD_SOLVE_010
+
+  Propose un composants java definissant au niveau M3 les concepts de base de transformation de modele et d'exraction de proprietes 
+  
+        * @version 0.0.1
+        
+        * @track SRS_SOLVE_010
+        
+** @req SDD_SOLVE_020
+
+  Propose un composants permettant des transformations entre structure transition avec ou sans logiques
+  
+        * @version 0.0.1
+        
+        * @track SRS_SOLVE_010
+
+=====================
+
+[model/model.jpg] Liste des projets
+
+* Liste des projets
+
+** @req SRS_LOGIC_010
+
+  Propose un composant java generique M3 propre au logiques
+  
+        * @version 0.0.1
+        
+        * @track SRS_LOGIC_020, SRS_LOGIC_010
+
+** @req SRS_LOGIC_020
+
+  Propose un composant java implementant les concepts des LP  
+  
+        * @version 0.0.1
+        
+        * @track SRS_LOGIC_010
+        
+** @req SDD_LOGIC_030
+
+  Propose un composant java implementant les concepts des LTL  
+  
+        * @version 0.0.1
+        
+        * @track SRS_LOGIC_020

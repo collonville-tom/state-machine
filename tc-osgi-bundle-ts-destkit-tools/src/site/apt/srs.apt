@@ -1,0 +1,93 @@
+Destkit-tools Software Requirements Specification
+
+* Outils
+
+** @req SRS_BUNDLE_DESTKIT_TOOL_010
+
+  La boite a outils sur les FSM permet le calcul de la partie accessible
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_020
+
+  La boite a outils sur les FSM permet le calcul de la partie coaccessible
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_030
+
+  La boite a outils sur les FSM permet le calcul du complement d'un FSM
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_040
+
+  La boite a outils sur les FSM permet de rendre deterministe un automate
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_050
+
+  La boite a outils sur les FSM permet le calcul du produit libre de deux automates
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_060
+
+  La boite a outils sur les FSM permet la projection inverse d'un automate
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_070
+
+  La boite a outils sur les FSM permet la reduction d'un automate
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_080
+
+  La boite a outils sur les FSM permet le calcul de la fermeture prefixé d'un automate
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_090
+
+  La boite a outils sur les FSM permet le calcul du produit de deux automates
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_100
+
+  La boite a outils sur les FSM permet le calsul de la projection d'un automate sur un alphabet
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_110
+
+  La boite a outils sur les FSM permet le calcul d'un superviseur supreme controllable
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_120
+
+  La boite a outils sur les FSM permet le calcul d'un superviseur supreme normal
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_130
+
+  La boite a outils sur les FSM permet le calcul du produit synchronisé de deux automates
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_140
+
+  La boite a outils sur les FSM permet le calcul du trim d'un automate
+  
+        * @version 0.0.1
+        
+** @req SRS_BUNDLE_DESTKIT_TOOL_150
+
+  La boite a outils sur les FSM permet le calcul de l'union de deux automates
+  
+        * @version 0.0.1

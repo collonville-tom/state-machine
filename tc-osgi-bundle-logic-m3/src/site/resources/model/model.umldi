@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_VkDREL5sEeKhi5OGInQTnA" activeDiagram="_VkDREb5sEeKhi5OGInQTnA">
+  <model href="model.uml#_CocitL5sEeKhi5OGInQTnA"/>
+  <diagrams xmi:id="_VkDREb5sEeKhi5OGInQTnA" position="0,0" size="100,100" name="No name" viewport="0,0">
+    <property xmi:id="_Vkc5sL5sEeKhi5OGInQTnA" key="pageFormatName" value="A4"/>
+    <property xmi:id="_Vkc5sb5sEeKhi5OGInQTnA" key="diagramWidth" value="840"/>
+    <property xmi:id="_Vkc5sr5sEeKhi5OGInQTnA" key="diagramHeight" value="1188"/>
+    <property xmi:id="_Vkc5s75sEeKhi5OGInQTnA" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_Vkc5tL5sEeKhi5OGInQTnA" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_Vkc5tb5sEeKhi5OGInQTnA" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_Vkc5tr5sEeKhi5OGInQTnA" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_Vkc5t75sEeKhi5OGInQTnA" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_Vkc5uL5sEeKhi5OGInQTnA" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VkDREr5sEeKhi5OGInQTnA" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="model.uml#_CocitL5sEeKhi5OGInQTnA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_VpZEEL5sEeKhi5OGInQTnA" position="10,11" size="222,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VpZEEb5sEeKhi5OGInQTnA" presentation="default">
+        <element href="model.uml#_CosaUL5sEeKhi5OGInQTnA"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_VpZEEr5sEeKhi5OGInQTnA">
+        <property xmi:id="_VpZEE75sEeKhi5OGInQTnA" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VpZEFL5sEeKhi5OGInQTnA" presentation="default">
+          <element href="model.uml#_CosaUL5sEeKhi5OGInQTnA"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_VpZEFb5sEeKhi5OGInQTnA">
+        <property xmi:id="_VpZEFr5sEeKhi5OGInQTnA" key="eStructuralFeatureID" value="47"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VpZEF75sEeKhi5OGInQTnA" presentation="default">
+          <element href="model.uml#_CosaUL5sEeKhi5OGInQTnA"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_VqG1wL5sEeKhi5OGInQTnA" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqG1wb5sEeKhi5OGInQTnA" presentation="default">
+            <element href="model.uml#_CpKUYL5sEeKhi5OGInQTnA"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_VqLuQL5sEeKhi5OGInQTnA" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqLuQb5sEeKhi5OGInQTnA" presentation="default">
+            <element href="model.uml#_CpMJkb5sEeKhi5OGInQTnA"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_VqMVUL5sEeKhi5OGInQTnA" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqMVUb5sEeKhi5OGInQTnA" presentation="default">
+            <element href="model.uml#_CpMJk75sEeKhi5OGInQTnA"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_VqAIEL5sEeKhi5OGInQTnA" position="292,11" size="152,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqAIEb5sEeKhi5OGInQTnA" presentation="default">
+        <element href="model.uml#_CowrwL5sEeKhi5OGInQTnA"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_VqAIEr5sEeKhi5OGInQTnA">
+        <property xmi:id="_VqAIE75sEeKhi5OGInQTnA" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqAIFL5sEeKhi5OGInQTnA" presentation="default">
+          <element href="model.uml#_CowrwL5sEeKhi5OGInQTnA"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_VqAIFb5sEeKhi5OGInQTnA">
+        <property xmi:id="_VqAIFr5sEeKhi5OGInQTnA" key="eStructuralFeatureID" value="38"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqAIF75sEeKhi5OGInQTnA" presentation="default">
+          <element href="model.uml#_CowrwL5sEeKhi5OGInQTnA"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_VqNjcL5sEeKhi5OGInQTnA" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqNjcb5sEeKhi5OGInQTnA" presentation="default">
+            <element href="model.uml#_CpMwoL5sEeKhi5OGInQTnA"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_VqEZgL5sEeKhi5OGInQTnA" position="504,11" size="117,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqEZgb5sEeKhi5OGInQTnA" presentation="default">
+        <element href="model.uml#_CpMJkL5sEeKhi5OGInQTnA"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_VqEZgr5sEeKhi5OGInQTnA">
+        <property xmi:id="_VqEZg75sEeKhi5OGInQTnA" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqEZhL5sEeKhi5OGInQTnA" presentation="default">
+          <element href="model.uml#_CpMJkL5sEeKhi5OGInQTnA"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_VqEZhb5sEeKhi5OGInQTnA">
+        <property xmi:id="_VqEZhr5sEeKhi5OGInQTnA" key="eStructuralFeatureID" value="38"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VqEZh75sEeKhi5OGInQTnA" presentation="default">
+          <element href="model.uml#_CpMJkL5sEeKhi5OGInQTnA"/>
+        </semanticModel>
+      </contained>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

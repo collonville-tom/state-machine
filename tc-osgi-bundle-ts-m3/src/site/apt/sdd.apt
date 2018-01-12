@@ -1,0 +1,23 @@
+Transition structure M3 Software Design Description
+
+=====================
+
+[model/model.jpg] Interfaces
+
+* Metametamodele
+
+** @req SDD_BUNDLE_TS_M3_010
+
+  Le framework definit par les interfaces ITs, ITransition, IProperty, IState
+  
+        * @version 0.0.2
+        
+        * @track SRS_BUNDLE_TS_M3_010 
+
+** @req SDD_BUNDLE_TS_M3_020
+
+  Le framework permet la serialisation des Structures a Transitions par la classe utilitaire TSSerialTool
+  
+        * @version 0.0.2
+        
+        * @track SRS_BUNDLE_TS_M3_020 

@@ -1,0 +1,11 @@
+Package: ${project.artifactId}-${build}
+Version: ${versiontimestamp}
+Section: base
+Priority: optional
+Architecture: all
+Depends: tc-osgi-bundle-utils-${utils.version}, tc-osgi-bundle-spring-${spring.version}, tc-osgi-equinox-loader (>= ${equinox-loader.version})
+Maintainer: Collonville Thomas <collonville_tom@yahoo.fr>
+Homepage: <http://collonville.thomas.free.fr>
+Description: Bundle outils generique pour interface graphiqe osgi 
+
+

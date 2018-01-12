@@ -1,0 +1,23 @@
+Logic structure transitionnel transformation Software Design Description
+
+=====================
+
+[model/No name.jpg] Transformation de modele
+
+* Transformation Project
+
+** @req SDD_BUNDLE_TRANSFORMATION_M3_010
+
+  Propose un composant java permettant des transformations 
+  
+        * @version 0.0.1
+        
+        * @track SRS_SOLVE_010
+        
+** @req SDD_BUNDLE_TRANSFORMATION_M3_020
+
+  Propose la classe Kripke2Fsm 
+  
+        * @version 0.0.1
+        
+        * @track SDD_SOLVE_020

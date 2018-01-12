@@ -1,0 +1,11 @@
+Kripke-tools Software Design Description
+
+* Outils
+
+** @req SDD_BUNDLE_KRIPKE_TOOL_005
+
+  La boite a outils sur les automates de kripke permet la generation d'un modele graphviz via l'utilisation d'un visiteur (classe Kripke2GraphvizVisitor)
+  
+        * @version 0.0.1
+        
+        * @track SRS_BUNDLE_KRIPKE_TOOL_005
