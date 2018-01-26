@@ -4,7 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.tc.osgi.bundle.logic.m3.IPa;
-import org.tc.osgi.bundle.ts.m3.ITs;
+import org.tc.osgi.bundle.ts.m3.core.ITs;
+
 
 /**
  * AbstractSatisfy.java.
