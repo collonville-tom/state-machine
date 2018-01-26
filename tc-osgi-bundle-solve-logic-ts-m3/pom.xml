@@ -20,7 +20,7 @@
 		<dependency>
 			<groupId>org.tc.osgi.bundle.ts</groupId>
 			<artifactId>tc-osgi-bundle-ts-m3</artifactId>
-			<version>${tc-m3.version}${snapshot}</version>
+			<version>${ts-m3.version}${snapshot}</version>
 			<scope>compile</scope>
 			<classifier>assembly</classifier>
 		</dependency>
