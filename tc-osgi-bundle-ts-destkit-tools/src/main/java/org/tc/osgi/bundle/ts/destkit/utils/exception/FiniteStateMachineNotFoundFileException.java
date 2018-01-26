@@ -1,6 +1,6 @@
 package org.tc.osgi.bundle.ts.destkit.utils.exception;
 
-import org.tc.osgi.bundle.ts.utils.exception.TSFileNotFoundException;
+import org.tc.osgi.bundle.ts.m3.utils.exception.TSFileNotFoundException;
 
 public class FiniteStateMachineNotFoundFileException extends TSFileNotFoundException {
 

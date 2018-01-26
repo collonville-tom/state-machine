@@ -6,10 +6,10 @@ import org.tc.osgi.bundle.ts.destkit.exec.exception.ExecInitExeception;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmSerialTool;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.GraphvizVisitor;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
 
 public class BunnyTest {
 
@@ -85,9 +85,9 @@ public class BunnyTest {
         fsm.accept(new GraphvizVisitor(GraphvizVisitor.NOLABEL));
         FsmSerialTool.getInstance().saveFsm(fsm);
 
-        LoggerGestionnary.getInstance(BunnyTest.class).debug(fsm.getAlphabet().size());
-        LoggerGestionnary.getInstance(BunnyTest.class).debug(fsm.getStatesSet().size());
-        LoggerGestionnary.getInstance(BunnyTest.class).debug(fsm.getCloneTransitionFunction().size());
+        LoggerServiceProxy.getInstance().getLogger(BunnyTest.class).debug(fsm.getAlphabet().size());
+        LoggerServiceProxy.getInstance().getLogger(BunnyTest.class).debug(fsm.getStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(BunnyTest.class).debug(fsm.getCloneTransitionFunction().size());
     }
 
     @Test

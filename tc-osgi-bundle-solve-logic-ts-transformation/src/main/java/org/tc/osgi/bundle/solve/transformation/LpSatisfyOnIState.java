@@ -3,9 +3,9 @@ package org.tc.osgi.bundle.solve.transformation;
 import org.tc.osgi.bundle.logic.lp.metamodel.Pa;
 import org.tc.osgi.bundle.logic.m3.IPa;
 import org.tc.osgi.bundle.solve.m3.AbstractSatisfy;
-import org.tc.osgi.bundle.ts.m3.IProperty;
-import org.tc.osgi.bundle.ts.m3.IState;
-import org.tc.osgi.bundle.ts.m3.ITs;
+import org.tc.osgi.bundle.ts.m3.core.IProperty;
+import org.tc.osgi.bundle.ts.m3.core.IState;
+import org.tc.osgi.bundle.ts.m3.core.ITs;
 import org.tc.osgi.bundle.utils.collection.Collections;
 import org.tc.osgi.bundle.utils.collection.IPredicate;
 

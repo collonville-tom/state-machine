@@ -4,9 +4,10 @@ import java.util.Collection;
 import java.util.HashSet;
 
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.PropAtom;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
-import org.tc.osgi.bundle.utils.collection.ITransformer;
+import org.tc.osgi.bundle.ts.kripke.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
+import org.tc.osgi.bundle.utils.interf.collection.ITransformer;
+
 
 @SuppressWarnings("serial")
 public class PropAtomSet extends HashSet<PropAtom> implements Cloneable {
@@ -29,7 +30,7 @@ public class PropAtomSet extends HashSet<PropAtom> implements Cloneable {
 
     @Override
     public PropAtomSet clone() {
-        return (PropAtomSet) Collections.getInstance().collect(this, new ITransformer<PropAtom>() {
+        return (PropAtomSet) CollectionUtilsServiceProxy.getInstance().collect(this, new ITransformer<PropAtom>() {
 
             @Override
             public void evaluate(final Collection<PropAtom> c, final PropAtom e) {
@@ -40,7 +41,7 @@ public class PropAtomSet extends HashSet<PropAtom> implements Cloneable {
 
     public boolean containsPropAtom(final PropAtom e) {
         final PropAtom propAtom = e;
-        if (Collections.getInstance().extract(this, new IPredicate<PropAtom>() {
+        if (CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<PropAtom>() {
 
             @Override
             public boolean evaluate(final PropAtom e1) {
@@ -58,7 +59,7 @@ public class PropAtomSet extends HashSet<PropAtom> implements Cloneable {
 
     public boolean removePropAtom(final PropAtom e) {
         final PropAtom s = e;
-        final PropAtom propAtom = Collections.getInstance().extract(this, new IPredicate<PropAtom>() {
+        final PropAtom propAtom = CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<PropAtom>() {
 
             @Override
             public boolean evaluate(final PropAtom e1) {

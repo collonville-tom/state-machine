@@ -1,6 +1,6 @@
 package org.tc.osgi.bundle.ts.kripke.utils.exception;
 
-import org.tc.osgi.bundle.ts.utils.exception.TSFileNotFoundException;
+import org.tc.osgi.bundle.ts.m3.utils.exception.TSFileNotFoundException;
 
 /**
  * KripkeNotFoundFileException.java.

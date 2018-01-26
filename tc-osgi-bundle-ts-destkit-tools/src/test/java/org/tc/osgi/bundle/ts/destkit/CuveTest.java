@@ -3,12 +3,13 @@ package org.tc.osgi.bundle.ts.destkit;
 import org.junit.Test;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmSerialTool;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.Fsm2GraphvizVisitor;
-import org.tc.osgi.bundle.ts.utils.exception.TSFileNotFoundException;
-import org.tc.osgi.bundle.utils.exception.FieldTrackingAssignementException;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
+import org.tc.osgi.bundle.ts.m3.utils.exception.TSFileNotFoundException;
+import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
+
 
 public class CuveTest {
 
@@ -63,9 +64,9 @@ public class CuveTest {
             fsm = FsmSerialTool.getInstance().readFsm("FsmTest");
             fsm.accept(new Fsm2GraphvizVisitor(Fsm2GraphvizVisitor.NOLABEL));
         } catch (final FieldTrackingAssignementException e) {
-            LoggerGestionnary.getInstance(CuveTest.class).error(e);
+            LoggerServiceProxy.getInstance().getLogger(CuveTest.class).error(e);
         } catch (final TSFileNotFoundException e) {
-            LoggerGestionnary.getInstance(CuveTest.class).error(e);
+            LoggerServiceProxy.getInstance().getLogger(CuveTest.class).error(e);
         }
 
     }

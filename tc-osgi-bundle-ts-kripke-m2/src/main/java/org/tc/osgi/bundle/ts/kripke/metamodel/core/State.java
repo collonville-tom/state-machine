@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.tc.osgi.bundle.ts.kripke.metamodel.PropAtomSet;
-import org.tc.osgi.bundle.ts.m3.IProperty;
-import org.tc.osgi.bundle.ts.m3.IState;
+import org.tc.osgi.bundle.ts.m3.core.IProperty;
+import org.tc.osgi.bundle.ts.m3.core.IState;
 
 /**
  * State.java.
@@ -109,7 +109,7 @@ public class State implements Cloneable, IState {
 
     /**
      * @return String
-     * @see org.tc.osgi.bundle.ts.m3.IState#getName()
+     * @see org.tc.osgi.bundle.ts.m3.core.IState#getName()
      */
     @Override
     public String getName() {
@@ -126,7 +126,7 @@ public class State implements Cloneable, IState {
 
     /**
      * @return HashSet<IProperty>
-     * @see org.tc.osgi.bundle.ts.m3.IState#getProperty()
+     * @see org.tc.osgi.bundle.ts.m3.core.IState#getProperty()
      */
     @Override
     public Set<IProperty> getProperty() {

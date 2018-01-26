@@ -1,8 +1,9 @@
 package org.tc.osgi.bundle.ts.kripke.visitor;
 
 import org.tc.osgi.bundle.ts.kripke.metamodel.Kripke;
-import org.tc.osgi.bundle.utils.pattern.visitor.IVisitable;
-import org.tc.osgi.bundle.utils.pattern.visitor.IVisitor;
+import org.tc.osgi.bundle.utils.interf.pattern.visitor.IVisitable;
+import org.tc.osgi.bundle.utils.interf.pattern.visitor.IVisitor;
+
 
 /**
  * AbstractKripkeVisitor.java.

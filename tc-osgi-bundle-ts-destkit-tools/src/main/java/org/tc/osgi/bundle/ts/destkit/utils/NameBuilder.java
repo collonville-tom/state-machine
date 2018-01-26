@@ -4,7 +4,9 @@ import java.util.Comparator;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
-import org.tc.osgi.bundle.utils.exception.FieldTrackingAssignementException;
+import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
+
+
 
 /**
  * NameBuilder.java.

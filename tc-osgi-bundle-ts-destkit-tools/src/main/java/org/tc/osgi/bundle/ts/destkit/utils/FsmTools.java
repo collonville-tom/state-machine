@@ -10,9 +10,10 @@ import org.tc.osgi.bundle.ts.destkit.metamodel.TransitionsSet;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Transition;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
+
 
 /**
  * FsmTools.java.
@@ -80,7 +81,7 @@ public class FsmTools {
         for (final State s : clone.getCloneStatesSet()) {
             table.addAssociation(clone, s, fsm, fsm.getCloneState(s.getName()));
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("accessiblePart of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("accessiblePart of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -119,7 +120,7 @@ public class FsmTools {
         for (final State s : clone.getCloneStatesSet()) {
             table.addAssociation(clone, s, fsm, fsm.getCloneState(s.getName()));
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("coAccessiblePart of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("coAccessiblePart of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -146,7 +147,7 @@ public class FsmTools {
             }
 
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("complement of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("complement of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -184,7 +185,7 @@ public class FsmTools {
                     for (final String str : builder.getDeComposeName()) {
                         final State state = fsm.getCloneState(str);
                         if (state.getPossibleEvents().containsEvent(event)) {
-                            transitions.addAll(Collections.getInstance().select(fsm.getTransitionsWhere(state), new IPredicate<Transition>() {
+                            transitions.addAll(CollectionUtilsServiceProxy.getInstance().select(fsm.getTransitionsWhere(state), new IPredicate<Transition>() {
 
                                 @Override
                                 public boolean evaluate(final Transition t) {
@@ -227,7 +228,7 @@ public class FsmTools {
                 }
             }
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("deterministic of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("deterministic of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -276,7 +277,7 @@ public class FsmTools {
                 table.addAssociation(clone, stateOutput, fsmL, s);
             }
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("freeProduct of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("freeProduct of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -297,7 +298,7 @@ public class FsmTools {
         for (final State s : clone.getCloneStatesSet()) {
             table.addAssociation(clone, s, fsmL, fsmL.getCloneState(s.getName()));
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("inverseProjection of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("inverseProjection of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -316,7 +317,7 @@ public class FsmTools {
 
                         for (final Transition t : clone.getTransitionsWhere(s1)) {
                             if (t.getInput().equals(s1)) {
-                                final Transition trans = Collections.getInstance().extract(clone.getTransitionsWhere(s2), new IPredicate<Transition>() {
+                                final Transition trans = CollectionUtilsServiceProxy.getInstance().extract(clone.getTransitionsWhere(s2), new IPredicate<Transition>() {
 
                                     @Override
                                     public boolean evaluate(final Transition e) {
@@ -387,7 +388,7 @@ public class FsmTools {
                 }
             }
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("minimise of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("minimise of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -397,7 +398,7 @@ public class FsmTools {
             for (final State s : fsmClone.getCloneStatesSet()) {
                 table.addAssociation(fsmClone, s, fsm, fsm.getCloneState(s.getName()));
             }
-            LoggerGestionnary.getInstance(FsmTools.class).debug("prefClosure of " + fsmClone.getName() + " realized");
+            LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("prefClosure of " + fsmClone.getName() + " realized");
             return fsmClone;
         } else {
             fsmClone.setName("PrefClose_" + fsmClone.getName());
@@ -407,7 +408,7 @@ public class FsmTools {
             for (final State s : fsmClone.getCloneStatesSet()) {
                 table.addAssociation(fsmClone, s, fsm, fsm.getCloneState(s.getName()));
             }
-            LoggerGestionnary.getInstance(FsmTools.class).debug("prefClosure of " + fsmClone.getName() + " realized");
+            LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("prefClosure of " + fsmClone.getName() + " realized");
             return fsmClone;
         }
     }
@@ -448,7 +449,7 @@ public class FsmTools {
                 }
             }
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("product of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("product of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -494,7 +495,7 @@ public class FsmTools {
         for (final State s : clone.getCloneStatesSet()) {
             table.addAssociation(clone, s, fsmL, fsmL.getCloneState(s.getName()));
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("projection of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("projection of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -572,7 +573,7 @@ public class FsmTools {
          * (s2)); }
          */
 
-        LoggerGestionnary.getInstance(FsmTools.class).debug("Supremal Controlable of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("Supremal Controlable of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -617,7 +618,7 @@ public class FsmTools {
         }
         final FiniteStateMachine clone = FsmTools.getInstance().supremalControllable(specClone, systemClone);
         clone.setName("SupN_" + clone.getName());
-        LoggerGestionnary.getInstance(FsmTools.class).debug("Supremal Normal of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("Supremal Normal of " + clone.getName() + " realized");
         return clone;
     }
 
@@ -642,7 +643,7 @@ public class FsmTools {
         }
 
         prod.setName(fsmL.getName() + "_XSync_" + fsmR.getName());
-        LoggerGestionnary.getInstance(FsmTools.class).debug("	->syncProduct of " + prod.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("	->syncProduct of " + prod.getName() + " realized");
         return prod;
 
     }
@@ -653,7 +654,7 @@ public class FsmTools {
         for (final State s : fsmResult.getCloneStatesSet()) {
             table.addAssociation(fsmResult, s, fsm, fsm.getCloneState(s.getName()));
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("	->trim of " + fsmResult.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("	->trim of " + fsmResult.getName() + " realized");
         return fsmResult;
     }
 
@@ -725,7 +726,7 @@ public class FsmTools {
                 table.addAssociation(clone, s, fsmR, fsmR.getCloneState(s.getName()));
             }
         }
-        LoggerGestionnary.getInstance(FsmTools.class).debug("union of " + clone.getName() + " realized");
+        LoggerServiceProxy.getInstance().getLogger(FsmTools.class).debug("union of " + clone.getName() + " realized");
         return clone;
     }
 }

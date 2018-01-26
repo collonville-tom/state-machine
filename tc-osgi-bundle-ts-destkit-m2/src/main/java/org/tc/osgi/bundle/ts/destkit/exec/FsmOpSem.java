@@ -6,9 +6,10 @@ import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Transition;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
+
 
 /**
  * FsmOpSem.java.
@@ -45,7 +46,7 @@ public class FsmOpSem {
             throw new ExecInitExeception("Plusieurs etats initiaux trouvés");
         }
         currentState = (State) fsm.getInitialStateSet().toArray()[0];
-        LoggerGestionnary.getInstance(FsmOpSem.class).debug("Current State: " + currentState.getName());
+        LoggerServiceProxy.getInstance().getLogger(FsmOpSem.class).debug("Current State: " + currentState.getName());
     }
 
     /**
@@ -65,7 +66,7 @@ public class FsmOpSem {
      */
     public State next() {
         currentState = transitionAccepted.getOutput();
-        LoggerGestionnary.getInstance(FsmOpSem.class).debug("Current State: " + currentState.getName());
+        LoggerServiceProxy.getInstance().getLogger(FsmOpSem.class).debug("Current State: " + currentState.getName());
         return currentState;
     }
 
@@ -86,7 +87,7 @@ public class FsmOpSem {
 
         if (fsm.getPossibleEvents(currentState).containsEvent(receiveEvent)) {
             this.receiveEvent = receiveEvent;
-            transitionAccepted = Collections.getInstance().extract(fsm.getTransitionFunction(), new IPredicate<Transition>() {
+            transitionAccepted = CollectionUtilsServiceProxy.getInstance().extract(fsm.getTransitionFunction(), new IPredicate<Transition>() {
 
                 @Override
                 public boolean evaluate(final Transition e1) {
@@ -98,7 +99,7 @@ public class FsmOpSem {
             });
             return true;
         }
-        LoggerGestionnary.getInstance(FsmOpSem.class).debug("CurrentStateNotChange");
+        LoggerServiceProxy.getInstance().getLogger(FsmOpSem.class).debug("CurrentStateNotChange");
         return false;
     }
 

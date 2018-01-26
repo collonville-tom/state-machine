@@ -3,9 +3,9 @@ package org.tc.osgi.bundle.ts.destkit.metamodel.core;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.tc.osgi.bundle.ts.m3.IProperty;
-import org.tc.osgi.bundle.ts.m3.IState;
-import org.tc.osgi.bundle.ts.m3.ITransition;
+import org.tc.osgi.bundle.ts.m3.core.IProperty;
+import org.tc.osgi.bundle.ts.m3.core.IState;
+import org.tc.osgi.bundle.ts.m3.core.ITransition;
 
 /**
  * Transition.java.
@@ -98,7 +98,7 @@ public class Transition implements Cloneable, ITransition {
 
     /**
      * @return Set<IProperty>
-     * @see org.tc.osgi.bundle.ts.m3.ITransition#getProperty()
+     * @see org.tc.osgi.bundle.ts.m3.core.ITransition#getProperty()
      */
     @Override
     public Set<IProperty> getProperty() {
@@ -109,7 +109,7 @@ public class Transition implements Cloneable, ITransition {
 
     /**
      * @return IState
-     * @see org.tc.osgi.bundle.ts.m3.ITransition#getSourceState()
+     * @see org.tc.osgi.bundle.ts.m3.core.ITransition#getSourceState()
      */
     @Override
     public IState getSourceState() {
@@ -118,7 +118,7 @@ public class Transition implements Cloneable, ITransition {
 
     /**
      * @return IState
-     * @see org.tc.osgi.bundle.ts.m3.ITransition#getTargetState()
+     * @see org.tc.osgi.bundle.ts.m3.core.ITransition#getTargetState()
      */
     @Override
     public IState getTargetState() {

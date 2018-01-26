@@ -4,9 +4,10 @@ import org.junit.Test;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.GraphvizVisitor;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
+
 
 /**
  * ToolsTest.java.
@@ -127,7 +128,7 @@ public class ToolsTest {
         // avec 3 pattes
         final FiniteStateMachine system3Patte = FsmTools.getInstance().freeProduct(patte1, FsmTools.getInstance().freeProduct(patte2, patte3));
         system3Patte.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(system3Patte.getCloneStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(system3Patte.getCloneStatesSet().size());
 
         final FiniteStateMachine spec1 = new FiniteStateMachine("spec1");
         spec1.addState(new State("0", State.INITIAL, State.MARKED));
@@ -184,12 +185,12 @@ public class ToolsTest {
 
         final FiniteStateMachine supervisor = FsmTools.getInstance().trim(FsmTools.getInstance().product(spec1, system3Patte));
         supervisor.setName("supervisor");
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(supervisor.getCloneStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(supervisor.getCloneStatesSet().size());
         supervisor.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
         final FiniteStateMachine closeLoop = FsmTools.getInstance().trim(FsmTools.getInstance().syncProduct(supervisor, system3Patte));
         closeLoop.setName("closeLoop");
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(closeLoop.getCloneStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(closeLoop.getCloneStatesSet().size());
         closeLoop.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
     }
@@ -391,7 +392,7 @@ public class ToolsTest {
          * LoggerGestionnary
          * .getInstance(ToolsTest.class).debug(myCloseLoop.getCloneStatesSet
          * ().size());
-         * LoggerGestionnary.getInstance(ToolsTest.class).debug(myCloseLoop
+         * LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(myCloseLoop
          * .getTransitionFunction().size()); myCloseLoop.accept(new
          * GraphvizVisitor(GraphvizVisitor.NAME));
          */
@@ -619,19 +620,19 @@ public class ToolsTest {
             FsmTools.getInstance().deterministic(FsmTools.getInstance().syncProduct(buffer, FsmTools.getInstance().syncProduct(breakRepairM1M2, breakRepairM3))));
         spec = FsmTools.getInstance().inverseProjection(spec, system.getCloneAlphabet());
         spec.setName("K");
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(spec.getCloneStatesSet().size());
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(spec.getTransitionFunction().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(spec.getCloneStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(spec.getTransitionFunction().size());
         spec.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
         final FiniteStateMachine supervisor = FsmTools.getInstance().minimise(FsmTools.getInstance().trim(FsmTools.getInstance().product(spec, system)));
         supervisor.setName("MyS");
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(supervisor.getCloneStatesSet().size());
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(supervisor.getTransitionFunction().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(supervisor.getCloneStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(supervisor.getTransitionFunction().size());
         supervisor.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
         final FiniteStateMachine myCloseLoop = FsmTools.getInstance().minimise(FsmTools.getInstance().trim(FsmTools.getInstance().syncProduct(system, supervisor)));
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(myCloseLoop.getCloneStatesSet().size());
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(myCloseLoop.getTransitionFunction().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(myCloseLoop.getCloneStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(myCloseLoop.getTransitionFunction().size());
         myCloseLoop.setName("MyCloseLoop");
         myCloseLoop.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
@@ -754,7 +755,7 @@ public class ToolsTest {
         ac.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
         coAc.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(FsmTools.getInstance().table.toString());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(FsmTools.getInstance().table.toString());
 
     }
 
@@ -789,7 +790,7 @@ public class ToolsTest {
 
         final FiniteStateMachine system = FsmTools.getInstance().freeProduct(v1, v2);
         system.setName("G");
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(system.getStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(system.getStatesSet().size());
         system.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
         final FiniteStateMachine spec = system.clone();
@@ -803,12 +804,12 @@ public class ToolsTest {
         final FiniteStateMachine supervisor = FsmTools.getInstance().trim(
             FsmTools.getInstance().syncProduct(spec, FsmTools.getInstance().deterministic(FsmTools.getInstance().projection(system, system.getObservableAlphabet()))));
 
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(supervisor.getStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(supervisor.getStatesSet().size());
         supervisor.setName("supervisor");
         supervisor.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 
         final FiniteStateMachine closeLoop = FsmTools.getInstance().trim(FsmTools.getInstance().syncProduct(supervisor, system));
-        LoggerGestionnary.getInstance(ToolsTest.class).debug(closeLoop.getStatesSet().size());
+        LoggerServiceProxy.getInstance().getLogger(ToolsTest.class).debug(closeLoop.getStatesSet().size());
         closeLoop.setName("closeLoop");
         closeLoop.accept(new GraphvizVisitor(GraphvizVisitor.NAME));
 

@@ -1,6 +1,6 @@
 package org.tc.osgi.bundle.ts.kripke.metamodel.core;
 
-import org.tc.osgi.bundle.ts.m3.IProperty;
+import org.tc.osgi.bundle.ts.m3.core.IProperty;
 
 /**
  * PropAtom.java.
@@ -62,7 +62,7 @@ public class PropAtom implements Cloneable, IProperty {
 
     /**
      * @return String
-     * @see org.tc.osgi.bundle.ts.m3.IProperty#getName()
+     * @see org.tc.osgi.bundle.ts.m3.core.IProperty#getName()
      */
     @Override
     public String getName() {

@@ -5,9 +5,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
-import org.tc.osgi.bundle.utils.collection.ITransformer;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
+import org.tc.osgi.bundle.utils.interf.collection.ITransformer;
+
 
 /**
  * StatesSet.java.
@@ -65,7 +66,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      */
     @Override
     public StatesSet clone() {
-        return (StatesSet) Collections.getInstance().collect(this, new ITransformer<State>() {
+        return (StatesSet) CollectionUtilsServiceProxy.getInstance().collect(this, new ITransformer<State>() {
 
             @Override
             public void evaluate(final Collection<State> c, final State e) {
@@ -81,7 +82,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      */
     public boolean containsState(final State e) {
         final State state = e;
-        if (Collections.getInstance().extract(this, new IPredicate<State>() {
+        if (CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e1) {
@@ -101,7 +102,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      * @return StatesSet
      */
     public StatesSet getInitialStateSet() {
-        return (StatesSet) Collections.getInstance().select(this, new IPredicate<State>() {
+        return (StatesSet) CollectionUtilsServiceProxy.getInstance().select(this, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -116,7 +117,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      * @return StatesSet
      */
     public StatesSet getMarkedStateSet() {
-        return (StatesSet) Collections.getInstance().select(this, new IPredicate<State>() {
+        return (StatesSet) CollectionUtilsServiceProxy.getInstance().select(this, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -134,7 +135,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      */
     public Alphabet getPossibleEvents(final State state) {
         final State s = state;
-        return Collections.getInstance().extract(this, new IPredicate<State>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -149,7 +150,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      * @return StatesSet
      */
     public StatesSet getUnInitialStateSet() {
-        return (StatesSet) Collections.getInstance().reject(this, new IPredicate<State>() {
+        return (StatesSet) CollectionUtilsServiceProxy.getInstance().reject(this, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -164,7 +165,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      * @return StatesSet
      */
     public StatesSet getUnMarkedStateSet() {
-        return (StatesSet) Collections.getInstance().reject(this, new IPredicate<State>() {
+        return (StatesSet) CollectionUtilsServiceProxy.getInstance().reject(this, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -182,7 +183,7 @@ public class StatesSet extends HashSet<State> implements Cloneable {
      */
     public boolean removeState(final State e) {
         final State s = e;
-        final State state = Collections.getInstance().extract(this, new IPredicate<State>() {
+        final State state = CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e1) {

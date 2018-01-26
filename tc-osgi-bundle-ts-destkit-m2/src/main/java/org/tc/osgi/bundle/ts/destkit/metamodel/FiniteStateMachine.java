@@ -6,13 +6,14 @@ import java.util.Set;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Transition;
-import org.tc.osgi.bundle.ts.m3.IProperty;
-import org.tc.osgi.bundle.ts.m3.IState;
-import org.tc.osgi.bundle.ts.m3.ITransition;
-import org.tc.osgi.bundle.ts.m3.ITs;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
-import org.tc.osgi.bundle.utils.pattern.visitor.IVisitor;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.ts.m3.core.IProperty;
+import org.tc.osgi.bundle.ts.m3.core.IState;
+import org.tc.osgi.bundle.ts.m3.core.ITransition;
+import org.tc.osgi.bundle.ts.m3.core.ITs;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
+import org.tc.osgi.bundle.utils.interf.pattern.visitor.IVisitor;
+
 
 /**
  * FiniteStateMachine.java.
@@ -282,7 +283,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
      */
     private Event getEvent(final Event event) {
         final Event s = event;
-        return Collections.getInstance().extract(alphabet, new IPredicate<Event>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(alphabet, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e) {
@@ -301,7 +302,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
      */
     private Event getEvent(final String event) {
         final Event s = new Event(event);
-        return Collections.getInstance().extract(alphabet, new IPredicate<Event>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(alphabet, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e) {
@@ -359,7 +360,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
 
     /**
      * @return Set<IProperty>
-     * @see org.tc.osgi.bundle.ts.m3.ITs#getProperty()
+     * @see org.tc.osgi.bundle.ts.m3.core.ITs#getProperty()
      */
     @Override
     public Set<IProperty> getProperty() {
@@ -376,7 +377,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
      * @return State
      */
     private State getState(final int state) {
-        return Collections.getInstance().extract(statesSet, new IPredicate<State>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(statesSet, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -395,7 +396,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
      */
     private State getState(final State state) {
         final State s = state;
-        return Collections.getInstance().extract(statesSet, new IPredicate<State>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(statesSet, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -415,7 +416,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
      */
     private State getState(final String state) {
         final State s = new State(state);
-        return Collections.getInstance().extract(statesSet, new IPredicate<State>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(statesSet, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -429,7 +430,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
 
     /**
      * @return Set<IState>
-     * @see org.tc.osgi.bundle.ts.m3.ITs#getStates()
+     * @see org.tc.osgi.bundle.ts.m3.core.ITs#getStates()
      */
     @Override
     public Set<IState> getStates() {
@@ -466,7 +467,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
      */
     private Transition getTransition(final Transition s) {
         final Transition t = s;
-        return Collections.getInstance().extract(transitionFunction, new IPredicate<Transition>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(transitionFunction, new IPredicate<Transition>() {
 
             @Override
             public boolean evaluate(final Transition e) {
@@ -490,7 +491,7 @@ public class FiniteStateMachine implements Cloneable, ITs {
 
     /**
      * @return Set<ITransition>
-     * @see org.tc.osgi.bundle.ts.m3.ITs#getTransitions()
+     * @see org.tc.osgi.bundle.ts.m3.core.ITs#getTransitions()
      */
     @Override
     public Set<ITransition> getTransitions() {

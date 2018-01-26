@@ -1,6 +1,6 @@
 package org.tc.osgi.bundle.ts.destkit.metamodel.core;
 
-import org.tc.osgi.bundle.ts.m3.IProperty;
+import org.tc.osgi.bundle.ts.m3.core.IProperty;
 
 /**
  * Event.java.

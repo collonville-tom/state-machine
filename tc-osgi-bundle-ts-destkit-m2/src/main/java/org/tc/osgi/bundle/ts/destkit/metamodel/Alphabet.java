@@ -4,9 +4,10 @@ import java.util.Collection;
 import java.util.HashSet;
 
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
-import org.tc.osgi.bundle.utils.collection.ITransformer;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
+import org.tc.osgi.bundle.utils.interf.collection.ITransformer;
+
 
 /**
  * Alphabet.java.
@@ -46,7 +47,7 @@ public class Alphabet extends HashSet<Event> implements Cloneable {
      */
     @Override
     public Alphabet clone() {
-        return (Alphabet) Collections.getInstance().collect(this, new ITransformer<Event>() {
+        return (Alphabet) CollectionUtilsServiceProxy.getInstance().collect(this, new ITransformer<Event>() {
 
             @Override
             public void evaluate(final Collection<Event> c, final Event e) {
@@ -62,7 +63,7 @@ public class Alphabet extends HashSet<Event> implements Cloneable {
      */
     public boolean containsEvent(final Event e) {
         final Event event = e;
-        if (Collections.getInstance().extract(this, new IPredicate<Event>() {
+        if (CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e1) {
@@ -83,7 +84,7 @@ public class Alphabet extends HashSet<Event> implements Cloneable {
      * @return Alphabet
      */
     public Alphabet getControllableAlphabet() {
-        return (Alphabet) Collections.getInstance().select(this, new IPredicate<Event>() {
+        return (Alphabet) CollectionUtilsServiceProxy.getInstance().select(this, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e) {
@@ -98,7 +99,7 @@ public class Alphabet extends HashSet<Event> implements Cloneable {
      * @return Alphabet
      */
     public Alphabet getObservableAlphabet() {
-        return (Alphabet) Collections.getInstance().select(this, new IPredicate<Event>() {
+        return (Alphabet) CollectionUtilsServiceProxy.getInstance().select(this, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e) {
@@ -113,7 +114,7 @@ public class Alphabet extends HashSet<Event> implements Cloneable {
      * @return Alphabet
      */
     public Alphabet getUncontrollableAlphabet() {
-        return (Alphabet) Collections.getInstance().reject(this, new IPredicate<Event>() {
+        return (Alphabet) CollectionUtilsServiceProxy.getInstance().reject(this, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e) {
@@ -128,7 +129,7 @@ public class Alphabet extends HashSet<Event> implements Cloneable {
      * @return Alphabet
      */
     public Alphabet getUnobservableAlphabet() {
-        return (Alphabet) Collections.getInstance().reject(this, new IPredicate<Event>() {
+        return (Alphabet) CollectionUtilsServiceProxy.getInstance().reject(this, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e) {
@@ -145,7 +146,7 @@ public class Alphabet extends HashSet<Event> implements Cloneable {
      */
     public boolean removeEvent(final Event e) {
         final Event s = e;
-        final Event event = Collections.getInstance().extract(this, new IPredicate<Event>() {
+        final Event event = CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<Event>() {
 
             @Override
             public boolean evaluate(final Event e1) {

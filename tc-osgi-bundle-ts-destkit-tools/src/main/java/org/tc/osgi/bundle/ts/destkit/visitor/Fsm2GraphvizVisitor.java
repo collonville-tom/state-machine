@@ -11,10 +11,11 @@ import java.util.Iterator;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Transition;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmSerialTool;
-import org.tc.osgi.bundle.ts.utils.TSSerialTool;
-import org.tc.osgi.bundle.utils.exception.FieldTrackingAssignementException;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
+import org.tc.osgi.bundle.ts.m3.utils.TSSerialTool;
+import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
+
 
 /**
  * @author   Collonvill�
@@ -56,11 +57,11 @@ public class Fsm2GraphvizVisitor extends AbstractFsmVisitor {
             ps.print(buff.toString());
             ps.close();
         } catch (final FileNotFoundException e) {
-            LoggerGestionnary.getInstance(Fsm2GraphvizVisitor.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
         } catch (final FieldTrackingAssignementException e) {
-            LoggerGestionnary.getInstance(Fsm2GraphvizVisitor.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
         } catch (final IOException e) {
-            LoggerGestionnary.getInstance(Fsm2GraphvizVisitor.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
         }
     }
 
@@ -142,9 +143,9 @@ public class Fsm2GraphvizVisitor extends AbstractFsmVisitor {
             ps.print(buff.toString());
             ps.close();
         } catch (final FileNotFoundException e) {
-            LoggerGestionnary.getInstance(Fsm2GraphvizVisitor.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
         } catch (final FieldTrackingAssignementException e) {
-            LoggerGestionnary.getInstance(Fsm2GraphvizVisitor.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
         }
     }
 

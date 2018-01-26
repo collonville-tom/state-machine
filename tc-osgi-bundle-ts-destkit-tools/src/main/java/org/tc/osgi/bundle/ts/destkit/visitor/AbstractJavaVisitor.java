@@ -6,9 +6,10 @@ import java.io.FileOutputStream;
 import java.io.PrintStream;
 
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmSerialTool;
-import org.tc.osgi.bundle.utils.exception.FieldTrackingAssignementException;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
+import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
+
 
 public abstract class AbstractJavaVisitor extends AbstractFsmVisitor {
 
@@ -37,9 +38,9 @@ public abstract class AbstractJavaVisitor extends AbstractFsmVisitor {
             ps.print(buff.toString());
             ps.close();
         } catch (final FileNotFoundException e) {
-            LoggerGestionnary.getInstance(AbstractJavaVisitor.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(AbstractJavaVisitor.class).error(e);
         } catch (final FieldTrackingAssignementException e) {
-            LoggerGestionnary.getInstance(AbstractJavaVisitor.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(AbstractJavaVisitor.class).error(e);
         }
     }
 

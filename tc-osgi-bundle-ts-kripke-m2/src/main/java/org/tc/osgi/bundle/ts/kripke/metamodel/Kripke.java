@@ -6,13 +6,14 @@ import java.util.Set;
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.PropAtom;
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.State;
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.Transition;
-import org.tc.osgi.bundle.ts.m3.IProperty;
-import org.tc.osgi.bundle.ts.m3.IState;
-import org.tc.osgi.bundle.ts.m3.ITransition;
-import org.tc.osgi.bundle.ts.m3.ITs;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
-import org.tc.osgi.bundle.utils.pattern.visitor.IVisitor;
+import org.tc.osgi.bundle.ts.kripke.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.ts.m3.core.IProperty;
+import org.tc.osgi.bundle.ts.m3.core.IState;
+import org.tc.osgi.bundle.ts.m3.core.ITransition;
+import org.tc.osgi.bundle.ts.m3.core.ITs;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
+import org.tc.osgi.bundle.utils.interf.pattern.visitor.IVisitor;
+
 
 public class Kripke implements Cloneable, ITs {
 
@@ -203,7 +204,7 @@ public class Kripke implements Cloneable, ITs {
 
     private PropAtom getPropAtom(final PropAtom propAtom) {
         final PropAtom s = propAtom;
-        return Collections.getInstance().extract(propAtomSet, new IPredicate<PropAtom>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(propAtomSet, new IPredicate<PropAtom>() {
 
             @Override
             public boolean evaluate(final PropAtom e) {
@@ -217,7 +218,7 @@ public class Kripke implements Cloneable, ITs {
 
     private PropAtom getPropAtom(final String propAtom) {
         final PropAtom s = new PropAtom(propAtom);
-        return Collections.getInstance().extract(propAtomSet, new IPredicate<PropAtom>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(propAtomSet, new IPredicate<PropAtom>() {
 
             @Override
             public boolean evaluate(final PropAtom e) {
@@ -252,7 +253,7 @@ public class Kripke implements Cloneable, ITs {
     // PARTIE PropAtomSet
 
     private State getState(final int state) {
-        return Collections.getInstance().extract(statesSet, new IPredicate<State>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(statesSet, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -266,7 +267,7 @@ public class Kripke implements Cloneable, ITs {
 
     private State getState(final State state) {
         final State s = state;
-        return Collections.getInstance().extract(statesSet, new IPredicate<State>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(statesSet, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -281,7 +282,7 @@ public class Kripke implements Cloneable, ITs {
 
     private State getState(final String state) {
         final State s = new State(state);
-        return Collections.getInstance().extract(statesSet, new IPredicate<State>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(statesSet, new IPredicate<State>() {
 
             @Override
             public boolean evaluate(final State e) {
@@ -329,7 +330,7 @@ public class Kripke implements Cloneable, ITs {
 
     private Transition getTransition(final Transition s) {
         final Transition t = s;
-        return Collections.getInstance().extract(transitionFunction, new IPredicate<Transition>() {
+        return CollectionUtilsServiceProxy.getInstance().extract(transitionFunction, new IPredicate<Transition>() {
 
             @Override
             public boolean evaluate(final Transition e) {

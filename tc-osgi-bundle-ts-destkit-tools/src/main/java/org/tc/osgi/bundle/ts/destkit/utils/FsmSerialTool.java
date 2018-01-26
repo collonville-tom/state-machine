@@ -3,12 +3,13 @@ package org.tc.osgi.bundle.ts.destkit.utils;
 import java.io.FileNotFoundException;
 
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.exception.FiniteStateMachineNotFoundFileException;
-import org.tc.osgi.bundle.ts.m3.ITs;
-import org.tc.osgi.bundle.ts.utils.TSSerialTool;
-import org.tc.osgi.bundle.ts.utils.exception.TSFileNotFoundException;
-import org.tc.osgi.bundle.utils.exception.FieldTrackingAssignementException;
-import org.tc.osgi.bundle.utils.logger.LoggerGestionnary;
+import org.tc.osgi.bundle.ts.m3.core.ITs;
+import org.tc.osgi.bundle.ts.m3.utils.TSSerialTool;
+import org.tc.osgi.bundle.ts.m3.utils.exception.TSFileNotFoundException;
+import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
+
 
 /**
  * FsmSerialTool.java.
@@ -83,9 +84,9 @@ public class FsmSerialTool extends TSSerialTool {
         try {
             saveTS(k);
         } catch (final FieldTrackingAssignementException e) {
-            LoggerGestionnary.getInstance(FsmSerialTool.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(FsmSerialTool.class).error(e);
         } catch (final FileNotFoundException e) {
-            LoggerGestionnary.getInstance(FsmSerialTool.class).error(e);
+        	LoggerServiceProxy.getInstance().getLogger(FsmSerialTool.class).error(e);
         }
     }
 

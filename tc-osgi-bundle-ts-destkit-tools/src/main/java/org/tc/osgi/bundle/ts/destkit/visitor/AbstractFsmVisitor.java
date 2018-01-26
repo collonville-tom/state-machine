@@ -1,7 +1,8 @@
 package org.tc.osgi.bundle.ts.destkit.visitor;
 
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
-import org.tc.osgi.bundle.utils.pattern.visitor.IVisitor;
+import org.tc.osgi.bundle.utils.interf.pattern.visitor.IVisitor;
+
 
 /**
  * AbstractFsmVisitor.java.

@@ -4,8 +4,8 @@ import java.util.HashSet;
 
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Transition;
-import org.tc.osgi.bundle.utils.collection.Collections;
-import org.tc.osgi.bundle.utils.collection.IPredicate;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.utils.interf.collection.IPredicate;
 
 /**
  * TransitionsSet.java.
@@ -59,7 +59,7 @@ public class TransitionsSet extends HashSet<Transition> implements Cloneable {
      */
     public boolean containsTransition(final Transition e) {
         final Transition t = e;
-        if (Collections.getInstance().extract(this, new IPredicate<Transition>() {
+        if (CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<Transition>() {
 
             @Override
             public boolean evaluate(final Transition e1) {
@@ -81,7 +81,7 @@ public class TransitionsSet extends HashSet<Transition> implements Cloneable {
      */
     public TransitionsSet getTransitionsWhere(final State state) {
         final State s = state;
-        return (TransitionsSet) Collections.getInstance().select(this, new IPredicate<Transition>() {
+        return (TransitionsSet) CollectionUtilsServiceProxy.getInstance().select(this, new IPredicate<Transition>() {
 
             @Override
             public boolean evaluate(final Transition e) {
@@ -101,7 +101,7 @@ public class TransitionsSet extends HashSet<Transition> implements Cloneable {
      */
     public boolean removeTransition(final Transition e) {
         final Transition s = e;
-        final Transition transition = Collections.getInstance().extract(this, new IPredicate<Transition>() {
+        final Transition transition = CollectionUtilsServiceProxy.getInstance().extract(this, new IPredicate<Transition>() {
 
             @Override
             public boolean evaluate(final Transition e1) {

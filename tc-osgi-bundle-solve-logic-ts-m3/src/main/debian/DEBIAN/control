@@ -1,0 +1,9 @@
+Package: ${project.artifactId}-${build}
+Version: ${versiontimestamp}
+Section: base
+Priority: optional
+Architecture: all
+Depends: tc-osgi-bundle-ts-m3-${utils.interfaces.version}, tc-osgi-bundle-logic-m3-${logic-lp.version}
+Maintainer: Collonville Thomas <collonville_tom@yahoo.fr>
+Homepage: <http://collonville.thomas.free.fr>
+Description: Bundle implementation Drools
