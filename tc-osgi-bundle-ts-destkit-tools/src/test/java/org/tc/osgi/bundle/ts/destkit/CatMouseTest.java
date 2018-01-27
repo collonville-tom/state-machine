@@ -5,14 +5,21 @@ import org.tc.osgi.bundle.ts.destkit.metamodel.Alphabet;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.GraphvizVisitor;
 import org.tc.osgi.bundle.ts.destkit.visitor.PIVisitor;
+
+import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
 
 public class CatMouseTest {
 
     @Test
     public void automateAB_AC() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State x = new State("x", State.INITIAL, State.NOTMARKED);
         final State y = new State("y", State.NOTINITIAL, State.MARKED);
         final State z = new State("z", State.NOTINITIAL, State.NOTMARKED);
@@ -51,6 +58,8 @@ public class CatMouseTest {
 
     @Test
     public void catAndMouseTest1() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         // Definition des pieces du chat
         final State catRoom0 = new State("C0", State.NOTINITIAL, State.NOTMARKED);
         final State catRoom1 = new State("C1", State.NOTINITIAL, State.NOTMARKED);
@@ -196,6 +205,8 @@ public class CatMouseTest {
     }
 
     public void catAndMouseTestApprocheDecentralise() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         // Definition des pieces du chat
         final State catRoom0 = new State("C0", State.NOTINITIAL, State.NOTMARKED);
         final State catRoom1 = new State("C1", State.NOTINITIAL, State.NOTMARKED);
@@ -323,6 +334,8 @@ public class CatMouseTest {
 
     @Test
     public void catAndMouseTestApprocheDirect() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State catRoom0 = new State("E0", State.NOTINITIAL, State.NOTMARKED);
         final State catRoom1 = new State("E1", State.NOTINITIAL, State.NOTMARKED);
         final State catRoom2 = new State("E2", State.INITIAL, State.MARKED);
@@ -406,6 +419,8 @@ public class CatMouseTest {
 
     @Test
     public void catAndMouseTestApprocheModulaire() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         // Definition des pieces du chat
         final State catRoom0 = new State("C0", State.NOTINITIAL, State.NOTMARKED);
         final State catRoom1 = new State("C1", State.NOTINITIAL, State.NOTMARKED);
@@ -554,6 +569,8 @@ public class CatMouseTest {
 
     @Test
     public void catAndMouseTestNormalite() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         // Definition des pieces du chat
         final State catRoom0 = new State("C0", State.NOTINITIAL, State.NOTMARKED);
         final State catRoom1 = new State("C1", State.NOTINITIAL, State.NOTMARKED);
@@ -633,6 +650,8 @@ public class CatMouseTest {
 
     @Test
     public void exemple() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine fsm1 = new FiniteStateMachine("fsm1");
         final FiniteStateMachine fsm2 = new FiniteStateMachine("fsm2");
         fsm1.addState(new State("0", State.INITIAL, State.MARKED));
@@ -655,6 +674,8 @@ public class CatMouseTest {
 
     @Test
     public void specInvalid() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine spec = new FiniteStateMachine("spec");
         spec.addEvent(new Event("c", Event.CONTROLLABLE, Event.UNOBSERVABLE));
         spec.addState(new State("0", State.INITIAL, State.MARKED));
@@ -672,6 +693,8 @@ public class CatMouseTest {
 
     @Test
     public void testNorm() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine system = new FiniteStateMachine("system");
         system.addEvent(new Event("b", Event.CONTROLLABLE, Event.UNOBSERVABLE));
         system.addState(new State("A", State.INITIAL, State.MARKED));

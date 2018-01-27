@@ -1,24 +1,26 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.tc.osgi.bundle.ts</groupId>
-  <artifactId>tc-osgi-bundle-ts-kripke-tools</artifactId>
-  <name>${project.artifactId}-${project.version}</name>
-  <description>Un bundle pour utiliser les automates de kripke</description>
-  <packaging>bundle</packaging>
-   <version>${build}${snapshot}</version>
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.tc.osgi.bundle.ts</groupId>
+	<artifactId>tc-osgi-bundle-ts-kripke-tools</artifactId>
+	<name>${project.artifactId}-${project.version}</name>
+	<description>Un bundle pour utiliser les automates de kripke</description>
+	<packaging>bundle</packaging>
+	<version>${build}${snapshot}</version>
+
 	<properties>
 		<build>0.1.0</build>
 		<equinox-loader.version>0.2.0</equinox-loader.version>
 		<ts-kripke-m2.version>0.1.0</ts-kripke-m2.version>
 		<utils.interfaces.version>0.1.0</utils.interfaces.version>
+		<utils.version>0.3.0</utils.version>
 		<snapshot>-SNAPSHOT</snapshot>
 	</properties>
 
 	<dependencies>
 		<dependency>
-     		<groupId>org.tc.osgi.bundle.ts</groupId>
-     		<artifactId>tc-osgi-bundle-ts-kripke-m2</artifactId>
+			<groupId>org.tc.osgi.bundle.ts</groupId>
+			<artifactId>tc-osgi-bundle-ts-kripke-m2</artifactId>
 			<version>${ts-kripke-m2.version}${snapshot}</version>
 			<scope>compile</scope>
 			<classifier>assembly</classifier>
@@ -30,11 +32,17 @@
 			<scope>compile</scope>
 			<classifier>assembly</classifier>
 		</dependency>
+		<dependency>
+			<groupId>org.tc.osgi.bundle.utils</groupId>
+			<artifactId>tc-osgi-bundle-utils</artifactId>
+			<version>${utils.version}${snapshot}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<parent>
 		<groupId>org.tc.parent</groupId>
-    	<artifactId>tc-osgi-parent</artifactId>
+		<artifactId>tc-osgi-parent</artifactId>
 		<version>0.7.0-SNAPSHOT</version>
 	</parent>
 
@@ -141,6 +149,6 @@
 			</plugin>
 		</plugins>
 	</build>
-  
+
 
 </project>

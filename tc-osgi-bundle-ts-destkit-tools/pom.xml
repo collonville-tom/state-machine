@@ -12,6 +12,7 @@
 		<equinox-loader.version>0.2.0</equinox-loader.version>
 		<ts-destkit-m2.version>0.1.0</ts-destkit-m2.version>
 		<utils.interfaces.version>0.1.0</utils.interfaces.version>
+		<utils.version>0.3.0</utils.version>
 		<snapshot>-SNAPSHOT</snapshot>
 	</properties>
 
@@ -29,6 +30,12 @@
 			<version>${utils.interfaces.version}${snapshot}</version>
 			<scope>compile</scope>
 			<classifier>assembly</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.tc.osgi.bundle.utils</groupId>
+			<artifactId>tc-osgi-bundle-utils</artifactId>
+			<version>${utils.version}${snapshot}</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 

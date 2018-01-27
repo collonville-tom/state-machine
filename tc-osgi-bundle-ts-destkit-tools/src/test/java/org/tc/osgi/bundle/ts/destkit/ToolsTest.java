@@ -4,9 +4,12 @@ import org.junit.Test;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.GraphvizVisitor;
+import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
 
 
 /**
@@ -23,6 +26,8 @@ public class ToolsTest {
      */
     @Test
     public void automateAB_AC() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final Event a = new Event("a");
         final Event b = new Event("b");
         final Event c = new Event("c");
@@ -59,6 +64,8 @@ public class ToolsTest {
      */
     @Test
     public void bunnyTest() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine patte1 = new FiniteStateMachine("Patte1");
         patte1.addState(new State("A1", State.NOTINITIAL, State.MARKED));
         patte1.addState(new State("P1", State.NOTINITIAL, State.MARKED));
@@ -200,6 +207,8 @@ public class ToolsTest {
      */
     @Test
     public void catAndMouseTest1() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         // Definition des pieces du chat
         final State catRoom0 = new State("C0", State.NOTINITIAL, State.NOTMARKED);
         final State catRoom1 = new State("C1", State.NOTINITIAL, State.NOTMARKED);
@@ -438,6 +447,8 @@ public class ToolsTest {
      */
     @Test
     public void compParrTest() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State stateX = new State("x", State.INITIAL, State.MARKED);
         final State stateY = new State("y", State.NOTINITIAL, State.NOTMARKED);
         final State stateZ = new State("z", State.NOTINITIAL, State.NOTMARKED);
@@ -487,6 +498,8 @@ public class ToolsTest {
      */
     @Test
     public void compParrTest1() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State stateX = new State("x", State.INITIAL, State.MARKED);
         final State stateY = new State("y", State.NOTINITIAL, State.NOTMARKED);
 
@@ -529,7 +542,8 @@ public class ToolsTest {
     @Test
     public void factoryTest() {
         // Machines
-
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State idle1 = new State("idle1", State.INITIAL, State.MARKED);
         final State working1 = new State("working1", State.NOTINITIAL, State.NOTMARKED);
         final State down1 = new State("down1", State.NOTINITIAL, State.NOTMARKED);
@@ -710,6 +724,8 @@ public class ToolsTest {
      */
     @Test
     public void freeProductTest() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State stateX = new State("x", State.INITIAL, State.MARKED);
         final State stateY = new State("y", State.NOTINITIAL, State.NOTMARKED);
         final State stateZ = new State("z", State.NOTINITIAL, State.NOTMARKED);
@@ -764,6 +780,8 @@ public class ToolsTest {
      */
     @Test
     public void guideWay() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine v1 = new FiniteStateMachine("V1");
         v1.addState(new State("0", State.INITIAL, State.NOTMARKED));
         v1.addState(new State("5", State.NOTINITIAL, State.MARKED));
@@ -820,6 +838,8 @@ public class ToolsTest {
      */
     @Test
     public void minimiseTest() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State x0 = new State("x0", State.INITIAL, State.NOTMARKED);
         final State x1 = new State("x1", State.NOTINITIAL, State.NOTMARKED);
         final State x12 = new State("x12", State.NOTINITIAL, State.NOTMARKED);
@@ -859,6 +879,8 @@ public class ToolsTest {
      */
     @Test
     public void nondetermToDeterm1() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State state0 = new State("0", State.INITIAL, State.NOTMARKED);
         final State state1 = new State("1", State.NOTINITIAL, State.NOTMARKED);
         final State state2 = new State("2", State.NOTINITIAL, State.MARKED);
@@ -891,6 +913,8 @@ public class ToolsTest {
      */
     @Test
     public void nondetermToDeterm2() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final Event d = new Event("E", Event.CONTROLLABLE, Event.UNOBSERVABLE);
 
         final State state0 = new State("0", State.INITIAL, State.MARKED);
@@ -935,6 +959,8 @@ public class ToolsTest {
      */
     @Test
     public void nondetermToDeterm3() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State state0 = new State("0", State.INITIAL, State.NOTMARKED);
         final State state1 = new State("1", State.INITIAL, State.NOTMARKED);
         final State state2 = new State("2", State.NOTINITIAL, State.MARKED);
@@ -964,6 +990,8 @@ public class ToolsTest {
      */
     @Test
     public void productTest() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State stateX = new State("x", State.INITIAL, State.MARKED);
         final State stateY = new State("y", State.NOTINITIAL, State.NOTMARKED);
         final State stateZ = new State("z", State.NOTINITIAL, State.MARKED);
@@ -1012,6 +1040,8 @@ public class ToolsTest {
      */
     @Test
     public void projection() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final Event a = new Event("a");
         final Event b = new Event("b");
         final Event c = new Event("c");
@@ -1061,6 +1091,8 @@ public class ToolsTest {
      */
     @Test
     public void supremalControllableTest() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine system = new FiniteStateMachine("G");
         system.addEvent(new Event("u", Event.UNCONTROLLABLE, Event.OBSERVABLE));
         system.addState(new State("q0", State.INITIAL, State.MARKED));
@@ -1114,6 +1146,8 @@ public class ToolsTest {
      */
     @Test
     public void testClone() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final Event d = new Event("E", Event.CONTROLLABLE, Event.UNOBSERVABLE);
 
         final State state0 = new State("0", State.INITIAL, State.MARKED);
@@ -1150,6 +1184,8 @@ public class ToolsTest {
      */
     @Test
     public void unionTest() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State stateX = new State("x", State.INITIAL, State.MARKED);
         final State stateY = new State("y", State.NOTINITIAL, State.NOTMARKED);
         final State stateZ = new State("z", State.NOTINITIAL, State.NOTMARKED);

@@ -7,6 +7,11 @@ import org.tc.osgi.bundle.ts.destkit.exec.exception.ExecInitExeception;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
+import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
+
 
 /**
  * FiniteStateMachineTest.java.
@@ -22,6 +27,8 @@ public class FiniteStateMachineTest {
      */
     @Test
     public void test() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final Event a = new Event("a");
         final Event b = new Event("b");
 
@@ -45,6 +52,9 @@ public class FiniteStateMachineTest {
             Assert.assertEquals(x, sem.next());
         } catch (final ExecInitExeception e) {
             Assert.fail();
+        }
+        catch (final Exception e) {
+            e.printStackTrace();
         }
 
     }

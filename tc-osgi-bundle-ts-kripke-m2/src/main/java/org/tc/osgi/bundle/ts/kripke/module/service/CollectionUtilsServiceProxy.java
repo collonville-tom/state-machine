@@ -31,6 +31,10 @@ public class CollectionUtilsServiceProxy implements ICollectionUtilsService {
 	 */
 	private ICollectionUtilsService service = null;
 
+	public void setService(ICollectionUtilsService service) {
+		this.service = service;
+	}
+
 	/**
 	 * UtilsServiceProxy constructor.
 	 */

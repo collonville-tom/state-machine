@@ -25,6 +25,10 @@ public class CollectionUtilsServiceProxy implements ICollectionUtilsService {
 		}
 		return CollectionUtilsServiceProxy.instance;
 	}
+	
+	public void setService(ICollectionUtilsService service) {
+		this.service = service;
+	}
 
 	/**
 	 * IUtilsService service.

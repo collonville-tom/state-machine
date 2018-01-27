@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.tc.osgi.bundle.ts.kripke.metamodel.Kripke;
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.PropAtom;
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.State;
+import org.tc.osgi.bundle.ts.kripke.module.service.CollectionUtilsServiceProxy;
+import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
 
 /**
  * KripkeTest.java.
@@ -19,6 +21,7 @@ public class KripkeTest {
      */
     @Test
     public void test() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
         final State state0 = new State("0", State.INITIAL);
         final State state1 = new State("1", State.NOTINITIAL);
         final State state3 = new State("3", State.NOTINITIAL);

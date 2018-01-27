@@ -1,20 +1,30 @@
 package org.tc.osgi.bundle.ts.destkit;
 
+import org.eclipse.osgi.internal.permadmin.SecurityTableUpdate;
 import org.junit.Test;
 import org.tc.osgi.bundle.ts.destkit.exec.FsmOpSem;
 import org.tc.osgi.bundle.ts.destkit.exec.exception.ExecInitExeception;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.Event;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmSerialTool;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.GraphvizVisitor;
 
+import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
+
 public class BunnyTest {
 
+	
+
+	
     @Test
     public void desLt() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine fsm1 = new FiniteStateMachine("leg1");
         fsm1.addState(new State("Start1", State.INITIAL, State.MARKED));
         fsm1.addState(new State("Unload1", State.NOTINITIAL, State.MARKED));
@@ -92,6 +102,8 @@ public class BunnyTest {
 
     @Test
     public void multi() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine fsm = new FiniteStateMachine("supervisor1");
         fsm.addState(new State("1", State.INITIAL, State.MARKED));
         fsm.addState(new State("2", State.NOTINITIAL, State.MARKED));
@@ -108,6 +120,8 @@ public class BunnyTest {
     }
 
     public void testPatteS() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine patte = new FiniteStateMachine("system");
         patte.addState(new State("Ret1", State.INITIAL, State.MARKED));
         patte.addState(new State("Att1", State.NOTINITIAL, State.NOTMARKED));
@@ -126,6 +140,8 @@ public class BunnyTest {
 
     @Test
     public void testSemOp() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine patte1 = new FiniteStateMachine("patte1");
         patte1.addState(new State("Ret1", State.INITIAL, State.MARKED));
         patte1.addState(new State("Att1", State.NOTINITIAL, State.NOTMARKED));

@@ -3,18 +3,23 @@ package org.tc.osgi.bundle.ts.destkit;
 import org.junit.Test;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
+import org.tc.osgi.bundle.ts.destkit.module.service.CollectionUtilsServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmSerialTool;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.Fsm2GraphvizVisitor;
 import org.tc.osgi.bundle.ts.m3.utils.exception.TSFileNotFoundException;
 import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
+import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
 
 
 public class CuveTest {
 
     @Test
     public void testcuve() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State a = new State("A", State.INITIAL, State.MARKED);
         final State m = new State("M", State.NOTINITIAL, State.NOTMARKED);
         final FiniteStateMachine ma = new FiniteStateMachine("MA");
@@ -59,6 +64,8 @@ public class CuveTest {
 
     @Test
     public void testDeSerialisation() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         FiniteStateMachine fsm;
         try {
             fsm = FsmSerialTool.getInstance().readFsm("FsmTest");
@@ -73,6 +80,8 @@ public class CuveTest {
 
     @Test
     public void testSerialisation() {
+    	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
+    	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State state0 = new State("0", State.INITIAL, State.NOTMARKED);
         final State state1 = new State("1", State.NOTINITIAL, State.NOTMARKED);
         final State state2 = new State("2", State.NOTINITIAL, State.MARKED);
