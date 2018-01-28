@@ -16,21 +16,18 @@ import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementEx
  * @author thomas collonvillé
  * @version 0.0.1
  */
-public class FsmSerialTool extends TSSerialTool {
+public class FsmSerialTool {
 
+	protected static FsmSerialTool serialTool = null;
     /**
      * getInstance.
      * @return FsmSerialTool
      */
     public static FsmSerialTool getInstance() {
-        if (TSSerialTool.serialTool == null) {
-            TSSerialTool.serialTool = new FsmSerialTool();
-        } else {
-            if (!(TSSerialTool.serialTool instanceof FsmSerialTool)) {
-                TSSerialTool.serialTool = new FsmSerialTool();
-            }
+    	if (FsmSerialTool.serialTool == null) {
+    		FsmSerialTool.serialTool = new FsmSerialTool();
         }
-        return (FsmSerialTool) TSSerialTool.serialTool;
+        return FsmSerialTool.serialTool;
     }
 
     /**
@@ -69,7 +66,7 @@ public class FsmSerialTool extends TSSerialTool {
      * @throws TSFileNotFoundException
      */
     public FiniteStateMachine readFsm(final String name) throws FieldTrackingAssignementException, TSFileNotFoundException {
-        final ITs ts = readTS(name);
+        final ITs ts = TSSerialTool.getInstance().readTS(name);
         if (!(ts instanceof FiniteStateMachine)) {
             throw new FiniteStateMachineNotFoundFileException("Le fichier ne contient pas de structure de FSM");
         }
@@ -82,12 +79,17 @@ public class FsmSerialTool extends TSSerialTool {
      */
     public void saveFsm(final FiniteStateMachine k) {
         try {
-            saveTS(k);
+        	TSSerialTool.getInstance().saveTS(k);
         } catch (final FieldTrackingAssignementException e) {
         	LoggerServiceProxy.getInstance().getLogger(FsmSerialTool.class).error(e);
         } catch (final FileNotFoundException e) {
         	LoggerServiceProxy.getInstance().getLogger(FsmSerialTool.class).error(e);
         }
     }
+
+	public String getDefaultSerialisationDir() {
+		return TSSerialTool.getInstance().getDefaultSerialisationDir();
+				
+	}
 
 }

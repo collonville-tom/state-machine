@@ -58,9 +58,7 @@ public class Fsm2GraphvizVisitor extends AbstractFsmVisitor {
             ps.close();
         } catch (final FileNotFoundException e) {
         	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
-        } catch (final FieldTrackingAssignementException e) {
-        	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
-        } catch (final IOException e) {
+        }  catch (final IOException e) {
         	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
         }
     }
@@ -144,9 +142,7 @@ public class Fsm2GraphvizVisitor extends AbstractFsmVisitor {
             ps.close();
         } catch (final FileNotFoundException e) {
         	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
-        } catch (final FieldTrackingAssignementException e) {
-        	LoggerServiceProxy.getInstance().getLogger(Fsm2GraphvizVisitor.class).error(e);
-        }
+        } 
     }
 
     /**

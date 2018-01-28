@@ -31,6 +31,11 @@ public class UtilsServiceProxy implements IUtilsService {
 	 */
 	private IUtilsService service = null;
 
+	public void setService(IUtilsService service) {
+		this.service = service;
+	}
+
+
 	/**
 	 * UtilsServiceProxy constructor.
 	 */

@@ -39,9 +39,7 @@ public abstract class AbstractJavaVisitor extends AbstractFsmVisitor {
             ps.close();
         } catch (final FileNotFoundException e) {
         	LoggerServiceProxy.getInstance().getLogger(AbstractJavaVisitor.class).error(e);
-        } catch (final FieldTrackingAssignementException e) {
-        	LoggerServiceProxy.getInstance().getLogger(AbstractJavaVisitor.class).error(e);
-        }
+        } 
     }
 
     protected abstract String generateMethods(FiniteStateMachine fsm);

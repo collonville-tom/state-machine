@@ -10,9 +10,10 @@ import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.GraphvizVisitor;
 import org.tc.osgi.bundle.ts.destkit.visitor.PIVisitor;
-
+import org.tc.osgi.bundle.ts.m3.module.service.UtilsServiceProxy;
 import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
 import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.UtilsServiceImpl;
 
 public class CatMouseTest {
 
@@ -334,6 +335,8 @@ public class CatMouseTest {
 
     @Test
     public void catAndMouseTestApprocheDirect() {
+    	UtilsServiceProxy.getInstance().setService(new UtilsServiceImpl());
+        org.tc.osgi.bundle.ts.m3.module.service.LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
     	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
     	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State catRoom0 = new State("E0", State.NOTINITIAL, State.NOTMARKED);
@@ -693,6 +696,8 @@ public class CatMouseTest {
 
     @Test
     public void testNorm() {
+    	UtilsServiceProxy.getInstance().setService(new UtilsServiceImpl());
+        org.tc.osgi.bundle.ts.m3.module.service.LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
     	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
     	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final FiniteStateMachine system = new FiniteStateMachine("system");

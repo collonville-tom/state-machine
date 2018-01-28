@@ -1,5 +1,6 @@
 package org.tc.osgi.bundle.ts.destkit;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.tc.osgi.bundle.ts.destkit.metamodel.FiniteStateMachine;
 import org.tc.osgi.bundle.ts.destkit.metamodel.core.State;
@@ -8,16 +9,21 @@ import org.tc.osgi.bundle.ts.destkit.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmSerialTool;
 import org.tc.osgi.bundle.ts.destkit.utils.FsmTools;
 import org.tc.osgi.bundle.ts.destkit.visitor.Fsm2GraphvizVisitor;
+import org.tc.osgi.bundle.ts.m3.module.service.UtilsServiceProxy;
 import org.tc.osgi.bundle.ts.m3.utils.exception.TSFileNotFoundException;
 import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
 import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
 import org.tc.osgi.bundle.utils.module.service.impl.LoggerUtilsServiceImpl;
+import org.tc.osgi.bundle.utils.module.service.impl.UtilsServiceImpl;
 
 
 public class CuveTest {
 
     @Test
     public void testcuve() {
+    	UtilsServiceProxy.getInstance().setService(new UtilsServiceImpl());
+        org.tc.osgi.bundle.ts.m3.module.service.LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
+    	
     	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
     	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State a = new State("A", State.INITIAL, State.MARKED);
@@ -27,8 +33,14 @@ public class CuveTest {
         ma.addState(m);
         ma.addTransition("A", "m", "M");
         ma.addTransition("M", "a", "A");
+        try {
         ma.accept(new Fsm2GraphvizVisitor(Fsm2GraphvizVisitor.NAME));
-
+        }catch (Exception e)
+        {
+        	e.printStackTrace();
+        	Assert.fail();
+        }
+        
         final State nn = new State("NN", State.INITIAL, State.MARKED);
         final State nb = new State("NB", State.NOTINITIAL, State.NOTMARKED);
         final State nh = new State("NH", State.NOTINITIAL, State.NOTMARKED);
@@ -64,6 +76,8 @@ public class CuveTest {
 
     @Test
     public void testDeSerialisation() {
+    	UtilsServiceProxy.getInstance().setService(new UtilsServiceImpl());
+        org.tc.osgi.bundle.ts.m3.module.service.LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
     	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
     	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         FiniteStateMachine fsm;
@@ -80,6 +94,8 @@ public class CuveTest {
 
     @Test
     public void testSerialisation() {
+    	UtilsServiceProxy.getInstance().setService(new UtilsServiceImpl());
+        org.tc.osgi.bundle.ts.m3.module.service.LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
     	CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
     	LoggerServiceProxy.getInstance().setService(new LoggerUtilsServiceImpl());
         final State state0 = new State("0", State.INITIAL, State.NOTMARKED);

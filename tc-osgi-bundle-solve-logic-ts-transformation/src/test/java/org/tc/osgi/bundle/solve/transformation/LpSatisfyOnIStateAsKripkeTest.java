@@ -3,12 +3,15 @@ package org.tc.osgi.bundle.solve.transformation;
 import junit.framework.Assert;
 
 import org.junit.Test;
+
 import org.tc.osgi.bundle.ts.kripke.metamodel.Kripke;
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.PropAtom;
 import org.tc.osgi.bundle.ts.kripke.metamodel.core.State;
+import org.tc.osgi.bundle.utils.module.service.impl.CollectionUtilsServiceImpl;
 
 /**
  * LpSatisfyOnIStateAsKripkeTest.java.
+ * 
  * @author Collonville Thomas
  * @version 0.0.1
  * @req SRS_BUNDLE_TRANSFORMATION_M3_030
@@ -16,36 +19,46 @@ import org.tc.osgi.bundle.ts.kripke.metamodel.core.State;
  */
 public class LpSatisfyOnIStateAsKripkeTest {
 
-    @Test
-    public void testKS() {
-        final State state0 = new State("S0", State.INITIAL);
-        final State state1 = new State("S1", State.INITIAL);
-        final State state2 = new State("S2", State.NOTINITIAL);
+	@Test
+	public void testKS() {
+		try {
+			org.tc.osgi.bundle.ts.kripke.module.service.CollectionUtilsServiceProxy.getInstance()
+					.setService(new CollectionUtilsServiceImpl());
+			org.tc.osgi.bundle.solve.transformation.module.service.CollectionUtilsServiceProxy.getInstance().setService(new CollectionUtilsServiceImpl());
 
-        final PropAtom p = new PropAtom("p");
-        final PropAtom q = new PropAtom("q");
+			final State state0 = new State("S0", State.INITIAL);
+			final State state1 = new State("S1", State.INITIAL);
+			final State state2 = new State("S2", State.NOTINITIAL);
 
-        final Kripke k = new Kripke("test");
+			final PropAtom p = new PropAtom("p");
+			final PropAtom q = new PropAtom("q");
 
-        k.addPropAtom(p);
-        k.addPropAtom(q);
+			final Kripke k = new Kripke("test");
 
-        k.addState(state0);
-        k.addState(state1);
-        k.addState(state2);
+			k.addPropAtom(p);
 
-        k.addPropAtomTo(state0, p);
-        k.addPropAtomTo(state0, q);
-        k.addPropAtomTo(state1, p);
-        k.addPropAtomTo(state2, q);
+			k.addPropAtom(q);
 
-        k.addTransition("S0", "S1");
-        k.addTransition("S1", "S0");
-        k.addTransition("S1", "S2");
-        k.addTransition("S2", "S0");
+			k.addState(state0);
+			k.addState(state1);
+			k.addState(state2);
 
-        final LpSatisfyOnIState sk = new LpSatisfyOnIState(k, state0);
-        final String formule = "et(not(_p_),_q_)";
-        Assert.assertEquals("F", sk.evaluate(formule));
-    }
+			k.addPropAtomTo(state0, p);
+			k.addPropAtomTo(state0, q);
+			k.addPropAtomTo(state1, p);
+			k.addPropAtomTo(state2, q);
+
+			k.addTransition("S0", "S1");
+			k.addTransition("S1", "S0");
+			k.addTransition("S1", "S2");
+			k.addTransition("S2", "S0");
+
+			final LpSatisfyOnIState sk = new LpSatisfyOnIState(k, state0);
+			final String formule = "et(not(_p_),_q_)";
+			Assert.assertEquals("F", sk.evaluate(formule));
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
 }
