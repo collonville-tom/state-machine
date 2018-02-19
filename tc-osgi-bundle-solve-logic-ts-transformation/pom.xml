@@ -70,6 +70,14 @@
 			<scope>compile</scope>
 			<classifier>assembly</classifier>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+		</dependency>
   	</dependencies>
 
 
@@ -87,13 +95,6 @@
 				<configuration>
 					<archive>
 						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>./</classpathPrefix>
-						</manifest>
-						<manifestEntries>
-							<Class-Path>./ ./${project.artifactId}-${project.version}/</Class-Path>
-						</manifestEntries>
 					</archive>
 				</configuration>
 			</plugin>
@@ -121,64 +122,12 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<executions>
-					<!-- Packaging debian -->
-					<execution>
-						<id>assembly-debian</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>src/main/assembly/assembly-debian.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-					<execution>
-						<id>assembly-targz</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>src/main/assembly/assembly-targz.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>jdeb</artifactId>
 				<groupId>org.vafer</groupId>
-				<version>1.5</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>jdeb</goal>
-						</goals>
-						<configuration>
-							<deb>${project.build.directory}/${project.artifactId}-${build}_${versiontimestamp}_all.deb</deb>
-							<verbose>true</verbose>
-							<controlDir>${project.build.directory}/${project.artifactId}-${project.version}/DEBIAN</controlDir>
-							<dataSet>
-								<data>
-									<src>${project.build.directory}/${project.artifactId}-${project.version}/opt</src>
-									<type>directory</type>
-									<mapper>
-										<type>perm</type>
-										<prefix>/opt</prefix>
-									</mapper>
-								</data>
-							</dataSet>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
