@@ -30,6 +30,7 @@
 			<filtered>true</filtered>
 			<includes>
 				<include>ts-m3.xml</include>
+				<include>ts-m3.yaml</include>
 			</includes>
 		</fileSet>
 	</fileSets>

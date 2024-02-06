@@ -1,11 +1,12 @@
 package org.tc.osgi.bundle.ts.m3.module.service;
 
-import org.tc.osgi.bundle.utils.interf.conf.IXmlProperty;
+import org.tc.osgi.bundle.utils.interf.conf.IYamlProperty;
 import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
 import org.tc.osgi.bundle.utils.interf.module.service.IPropertyUtilsService;
 
 /**
  * UtilsServiceProxy.java.
+ * 
  * @author collonville thomas
  * @version
  * @track
@@ -19,6 +20,7 @@ public class PropertyServiceProxy implements IPropertyUtilsService {
 
 	/**
 	 * getInstance.
+	 * 
 	 * @return UtilsServiceProxy
 	 */
 	public static PropertyServiceProxy getInstance() {
@@ -42,6 +44,7 @@ public class PropertyServiceProxy implements IPropertyUtilsService {
 
 	/**
 	 * getService.
+	 * 
 	 * @return IUtilsService
 	 */
 	public IPropertyUtilsService getService() {
@@ -50,6 +53,7 @@ public class PropertyServiceProxy implements IPropertyUtilsService {
 
 	/**
 	 * setService.
+	 * 
 	 * @param service IUtilsService
 	 */
 	public void setService(final IPropertyUtilsService service) {
@@ -57,7 +61,7 @@ public class PropertyServiceProxy implements IPropertyUtilsService {
 	}
 
 	@Override
-	public IXmlProperty getXMLPropertyFile(String propertyFileName) throws FieldTrackingAssignementException {
-		return service.getXMLPropertyFile(propertyFileName);
+	public IYamlProperty getYamlPropertyFile(String propertyFileName) throws FieldTrackingAssignementException {
+		return service.getYamlPropertyFile(propertyFileName);
 	}
 }

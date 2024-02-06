@@ -4,12 +4,12 @@
   <artifactId>tc-state-machine-module</artifactId>
   <name>${project.artifactId}-${project.version}</name>
   <packaging>pom</packaging>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.11.0-SNAPSHOT</version>
   
   <parent>
     <groupId>org.tc.parent</groupId>
     <artifactId>tc-parent</artifactId>
-    <version>0.7.0-SNAPSHOT</version>
+    <version>0.11.0-SNAPSHOT</version>
   </parent>
 
   <modules>

@@ -39,6 +39,7 @@
 			<filtered>true</filtered>
 			<includes>
 				<include>ts-kripke-m2.xml</include>
+				<include>ts-kripke-m2.yaml</include>
 			</includes>
 		</fileSet>
 	</fileSets>

@@ -8,16 +8,16 @@
   <version>${build}${snapshot}</version>
 
 	<properties>
-		<build>0.1.0</build>
-		<equinox-loader.version>0.2.0</equinox-loader.version>
+		<build>0.11.0</build>
+		<equinox-loader.version>0.11.0</equinox-loader.version>
 		<snapshot>-SNAPSHOT</snapshot>
-		<solve-logic-ts-m3.version>0.1.0</solve-logic-ts-m3.version>
-		<ts-kripke-m2.version>0.1.0</ts-kripke-m2.version>
-		<utils-interfaces.version>0.1.0</utils-interfaces.version>
-		<logic-lp.version>0.1.0</logic-lp.version>
-		<ts-destkit-tools.version>0.1.0</ts-destkit-tools.version>
-		<ts-kripke-tools.version>0.1.0</ts-kripke-tools.version>
-		<ts-destkit-m2.version>0.1.0</ts-destkit-m2.version>
+		<solve-logic-ts-m3.version>0.11.0</solve-logic-ts-m3.version>
+		<ts-kripke-m2.version>0.11.0</ts-kripke-m2.version>
+		<utils-interfaces.version>0.11.0</utils-interfaces.version>
+		<logic-lp.version>0.11.0</logic-lp.version>
+		<ts-destkit-tools.version>0.11.0</ts-destkit-tools.version>
+		<ts-kripke-tools.version>0.11.0</ts-kripke-tools.version>
+		<ts-destkit-m2.version>0.11.0</ts-destkit-m2.version>
 	</properties>
 
   	<dependencies>
@@ -76,7 +76,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
+			<artifactId>mockito-core</artifactId>
 		</dependency>
   	</dependencies>
 
@@ -84,7 +84,7 @@
 	<parent>
 		<groupId>org.tc.parent</groupId>
     	<artifactId>tc-osgi-parent</artifactId>
-		<version>0.7.0-SNAPSHOT</version>
+		<version>0.11.0-SNAPSHOT</version>
 	</parent>
 
 	<build>
@@ -101,25 +101,6 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Vendor>TC</Bundle-Vendor>
-					</instructions>
-				</configuration>
-				<executions>
-					<execution>
-						<id>bundle-manifest</id>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>manifest</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
